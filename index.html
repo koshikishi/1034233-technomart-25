@@ -7,7 +7,9 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <a class="logo"><img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47"></a>
+        <a class="logo">
+          <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47">
+        </a>
         <span class="header__search">Поиск:</span> <!-- Позже здесь будет форма поиска -->
         <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
         <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
@@ -87,61 +89,75 @@
           <h2>Популярные товары:</h2>
           <a class="button heading__button" href="#">Все популярные товары</a>
         </div>
-        <article class="product">
-          <h3>
-            <a href="catalog-item.html">Перфоратор <span class="product__model">Bosch BFG 9000</span></a>
-          </h3>
-          <img class="product__image" src="img/product-1.jpg" alt="Перфоратор Bosch BFG 9000" width="218" height="170">
-          <p class="product__price">
-            <s>32500 р.</s>
-            <b>25500 р.</b>
-          </p>
-          <p class="product__buttons">
-            <a class="button button--buy" href="#">Купить</a>
-            <a class="button button--bookmarks" href="#">В закладки</a>
-          </p>
-        </article>
-        <article class="product">
-          <h3>
-            <a href="catalog-item.html">Перфоратор <span class="product__model">Bosch BFG 3000</span></a>
-          </h3>
-          <img class="product__image" src="img/product-2.jpg" alt="Перфоратор Bosch BFG 3000" width="218" height="170">
-          <p class="product__price">
-            <s>22500 р.</s>
-            <b>15500 р.</b>
-          </p>
-          <p class="product__buttons">
-            <a class="button button--buy" href="#">Купить</a>
-            <a class="button button--bookmarks" href="#">В закладки</a>
-          </p>
-        </article>
-        <article class="product">
-          <h3>
-            <a href="catalog-item.html">Перфоратор <span class="product__model">Bosch BFG 6000</span></a>
-          </h3>
-          <img class="product__image" src="img/product-3.jpg" alt="Перфоратор Bosch BFG 6000" width="218" height="170">
-          <p class="product__price">
-            <s>30500 р.</s>
-            <b>25500 р.</b>
-          </p>
-          <p class="product__buttons">
-            <a class="button button--buy" href="#">Купить</a>
-            <a class="button button--bookmarks" href="#">В закладки</a>
-          </p>
-        </article>
-        <article class="product product--new">
-          <h3>
-            <a href="catalog-item.html">Перфоратор<span class="product__model">Bosch BFG 2000</span></a>
-          </h3>
-          <img class="product__image" src="img/product-4.jpg" alt="Перфоратор Bosch BFG 2000" width="218" height="170">
-          <p class="product__price">
-            <b>12500 р.</b>
-          </p>
-          <p class="product__buttons">
-            <a class="button button--buy" href="#">Купить</a>
-            <a class="button button--bookmarks" href="#">В закладки</a>
-          </p>
-        </article>
+        <div class="popular__list">
+          <article class="product">
+            <h3>
+              <a href="catalog-item.html">
+                Перфоратор
+                <span class="product__model">Bosch BFG 9000</span>
+              </a>
+            </h3>
+            <img class="product__image" src="img/product-1.jpg" alt="Перфоратор Bosch BFG 9000" width="218" height="170">
+            <p class="product__price">
+              <s>32500 р.</s>
+              <b>25500 р.</b>
+            </p>
+            <p class="product__buttons">
+              <a class="button button--buy" href="#">Купить</a>
+              <a class="button button--bookmarks" href="#">В закладки</a>
+            </p>
+          </article>
+          <article class="product">
+            <h3>
+              <a href="catalog-item.html">
+                Перфоратор
+                <span class="product__model">Bosch BFG 3000</span>
+              </a>
+            </h3>
+            <img class="product__image" src="img/product-2.jpg" alt="Перфоратор Bosch BFG 3000" width="218" height="170">
+            <p class="product__price">
+              <s>22500 р.</s>
+              <b>15500 р.</b>
+            </p>
+            <p class="product__buttons">
+              <a class="button button--buy" href="#">Купить</a>
+              <a class="button button--bookmarks" href="#">В закладки</a>
+            </p>
+          </article>
+          <article class="product">
+            <h3>
+              <a href="catalog-item.html">
+                Перфоратор
+                <span class="product__model">Bosch BFG 6000</span>
+              </a>
+            </h3>
+            <img class="product__image" src="img/product-3.jpg" alt="Перфоратор Bosch BFG 6000" width="218" height="170">
+            <p class="product__price">
+              <s>30500 р.</s>
+              <b>25500 р.</b>
+            </p>
+            <p class="product__buttons">
+              <a class="button button--buy" href="#">Купить</a>
+              <a class="button button--bookmarks" href="#">В закладки</a>
+            </p>
+          </article>
+          <article class="product product--new">
+            <h3>
+              <a href="catalog-item.html">
+                Перфоратор
+                <span class="product__model">Bosch BFG 2000</span>
+              </a>
+            </h3>
+            <img class="product__image" src="img/product-4.jpg" alt="Перфоратор Bosch BFG 2000" width="218" height="170">
+            <p class="product__price">
+              <b>12500 р.</b>
+            </p>
+            <p class="product__buttons">
+              <a class="button button--buy" href="#">Купить</a>
+              <a class="button button--bookmarks" href="#">В закладки</a>
+            </p>
+          </article>
+        </div>
       </section>
 
       <section class="brands">
@@ -149,48 +165,32 @@
           <h2>Популярные производители:</h2>
           <a class="button heading__button" href="#">Все производители</a>
         </div>
-        <ul class="brands__list">
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-bosch.jpg" alt="Производитель Bosch" width="126" height="37">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-makita.jpg" alt="Производитель Makita" width="123" height="40">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-dewalt.jpg" alt="Производитель DeWALT" width="146" height="44">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-interskol.jpg" alt="Производитель Интерскол" width="200" height="88">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-hitachi.jpg" alt="Производитель Hitachi" width="169" height="31">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-lg.jpg" alt="Производитель LG" width="121" height="73">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-aeg.jpg" alt="Производитель AEG" width="151" height="96">
-            </a>
-          </li>
-          <li>
-            <a class="brands__link" href="#">
-              <img src="img/brands-metabo.jpg" alt="Производитель Metabo" width="204" height="69">
-            </a>
-          </li>
-        </ul>
+        <div class="brands__list">
+          <a class="brands__link" href="#">
+            <img src="img/brands-bosch.jpg" alt="Производитель Bosch" width="126" height="37">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-makita.jpg" alt="Производитель Makita" width="123" height="40">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-dewalt.jpg" alt="Производитель DeWALT" width="146" height="44">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-interskol.jpg" alt="Производитель Интерскол" width="200" height="88">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-hitachi.jpg" alt="Производитель Hitachi" width="169" height="31">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-lg.jpg" alt="Производитель LG" width="121" height="73">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-aeg.jpg" alt="Производитель AEG" width="151" height="96">
+          </a>
+          <a class="brands__link" href="#">
+            <img src="img/brands-metabo.jpg" alt="Производитель Metabo" width="204" height="69">
+          </a>
+        </div>
       </section>
 
       <section class="services">
