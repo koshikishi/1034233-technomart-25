@@ -243,17 +243,17 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
         заехав в наш офис:</p>
-        <p class="contacts__map-image">
-          <a href="map.html">
-            <img src="img/map-small.jpg" alt="Карта с местоположением нашего офиса" width="300" height="158">
-          </a>
-        </p>
+        <a class="contacts__map-image" href="map.html">
+          <img src="img/map-small.jpg" alt="Карта с местоположением нашего офиса" width="300" height="158">
+        </a>
         <a class="button" href="write-us.html">Заблудились? Напишите нам!</a>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="logo footer__logo"><img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="68"></a>
+      <a class="logo logo--footer footer__logo">
+        <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="68">
+      </a>
       <address class="footer__contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
@@ -274,8 +274,10 @@
         </ul>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2010–2019 Компания «Техномарт»<br>
-        Все права защищены</p>
+        <p class="footer__copyright">
+          © 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
+        </p>
         <ul class="social footer__social">
           <li><a class="social__button social__button--vk" href="#">Вконтакте</a></li>
           <li><a class="social__button social__button--fb" href="#">Фейсбук</a></li>
@@ -292,13 +294,13 @@
       </div>
     </footer>
 
-    <section class="modal modal-contacts">
+    <section class="modal modal--contacts">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <!-- Позже здесь будет форма обратной связи -->
       <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
     </section>
 
-    <section class="modal modal-map">
+    <section class="modal modal--map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <!-- Позже здесь будет карта -->
       <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
