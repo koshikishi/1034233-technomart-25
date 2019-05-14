@@ -6,18 +6,26 @@
   </head>
   <body>
     <header class="header">
-      <p class="header__top">
-        <a class="logo header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47"></a>
+      <div class="header__top">
+        <a class="logo" href="index.html"><img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47"></a>
         <span class="header__search">Поиск:</span> <!-- Позже здесь будет форма поиска -->
-        <a class="header__bookmarks" href="bookmarks.html">Закладки: 0</a>
-        <a class="header__cart header__cart--full" href="cart.html">Корзина: 10</a>
-        <a class="header__order" href="order.html">Оформить заказ</a>
-      </p>
+        <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
+        <a class="header__button header__button--cart header__button--full" href="cart.html">Корзина: 10</a>
+        <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+      </div>
       <p class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
       <p class="header__contacts">
         <b>+7 (812) 555-05-55</b>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
+      <div class="user-nav">
+        <a class="user-nav__button user-nav__button--profile" href="profile.html">Равшан Джамшутович</a>
+          <div class="user-nav__account">
+            <a href="#">Мои заказы</a>
+            <a href="#">Личный кабинет</a>
+          </div>
+        <a class="user-nav__button user-nav__button--logout" href="logout.html"><img src="img/logout.svg" alt="Выйти" width="20" height="17"></a>
+      </div>
       <nav class="header__nav">
         <ul class="site-nav">
           <li><a href="index.html">Главная</a></li>
@@ -27,16 +35,6 @@
           <li><a href="offers.html">Спецпредложения</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <ul class="user-nav">
-          <li>
-            <a class="user-nav__profile" href="profile.html">Равшан Джамшутович</a>
-            <ul class="account-nav">
-              <li><a href="#">Мои заказы</a></li>
-              <li><a href="#">Личный кабинет</a></li>
-            </ul>
-          </li>
-          <li><a class="user-nav__logout" href="logout.html">Выйти</a></li>
         </ul>
       </nav>
     </header>

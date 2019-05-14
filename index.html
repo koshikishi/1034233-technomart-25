@@ -6,31 +6,31 @@
   </head>
   <body>
     <header class="header">
-      <p class="header__top">
-        <a class="logo header__logo"><img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47"></a>
+      <div class="header__top">
+        <a class="logo"><img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47"></a>
         <span class="header__search">Поиск:</span> <!-- Позже здесь будет форма поиска -->
-        <a class="header__bookmarks" href="bookmarks.html">Закладки: 0</a>
-        <a class="header__cart" href="cart.html">Корзина: 0</a>
-        <a class="header__order" href="order.html">Оформить заказ</a>
-      </p>
+        <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
+        <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
+        <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+      </div>
       <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <p class="header__contacts">
         <b>+7 (812) 555-05-55</b>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
+      <div class="user-nav">
+        <a class="user-nav__button user-nav__button--login" href="login.html">Войти</a>
+        <a class="user-nav__button" href="signup.html">Регистрация</a>
+      </div>
       <nav class="header__nav">
         <ul class="site-nav">
-          <li><a>Главная</a></li>
+          <li><a href="index.html">Главная</a></li>
           <li><a href="about.html">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="offers.html">Спецпредложения</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <ul class="user-nav">
-          <li><a class="user-nav__login" href="login.html">Войти</a></li>
-          <li><a class="user-nav__signup" href="signup.html">Регистрация</a></li>
         </ul>
       </nav>
     </header>
