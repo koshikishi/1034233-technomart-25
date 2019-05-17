@@ -297,8 +297,24 @@
 
     <section class="modal modal--contacts">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <!-- Позже здесь будет форма обратной связи -->
-      <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
+      <form class="contacts-form" action="" method="post">
+        <div class="contacts-form__item">
+          <label for="contacts-name">Ваше имя:</label>
+          <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="contacts-form__item">
+          <label for="contacts-email">Ваш e-mail:</label>
+          <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="contacts-form__item">
+          <label for="contacts-message">Текст письма:</label>
+          <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="modal__buttons">
+          <button class="button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal__close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal--map">
