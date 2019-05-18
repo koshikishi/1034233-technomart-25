@@ -63,24 +63,22 @@
           <a class="button button--promo promo-card__button" href="delivery.html">Бесплатно</a>
         </section>
         <section class="slider">
-          <div class="slider__item">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-            <a class="button slider__button" href="catalog.html">Открыть каталог</a>
+          <input class="slider__radio visually-hidden" id="slider-1" type="radio" name="slider">
+          <input class="slider__radio visually-hidden" id="slider-2" type="radio" name="slider" checked>
+          <div class="slider__control">
+            <label for="slider-1" aria-label="Первый слайд «Перфораторы»"></label>
+            <label for="slider-2" aria-label="Второй слайд «Дрели»"></label>
           </div>
-          <div class="slider__item slider__item--current">
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
-            <a class="button slider__button" href="catalog.html">Открыть каталог</a>
-          </div>
-          <div class="slider__control"> <!-- Позже элементы управления будут переработаны -->
-            <div class="slider__arrows">
-              <span class="slider__button">Влево</span> <!-- Позже здесь будет кнопка -->
-              <span class="slider__button">Вправо</span> <!-- Позже здесь будет кнопка -->
+          <div class="slider__inner">
+            <div class="slider__item">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <a class="button slider__button" href="catalog.html">Открыть каталог</a>
             </div>
-            <div class="slider__dots">
-              <span class="slider__radio">Первый слайд</span> <!-- Позже здесь будет переключатель -->
-              <span class="slider__radio slider__radio--current">Второй слайд</span> <!-- Позже здесь будет переключатель -->
+            <div class="slider__item">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <a class="button slider__button" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </section>
