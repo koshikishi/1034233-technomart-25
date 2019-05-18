@@ -68,9 +68,9 @@
               <button class="filters-form__thumb" type="button" aria-label="Максимальная цена"></button>
             </div>
             <div class="filters-form__price">
-              <input type="text" name="min-price" value="0">
+              <input type="text" name="min-price" value="0" aria-label="Минимальная цена">
               —
-              <input type="text" name="max-price" value="30000">
+              <input type="text" name="max-price" value="30000" aria-label="Максимальная цена">
             </div>
           </fieldset>
           <fieldset>
@@ -278,11 +278,11 @@
             </p>
           </article>
         </div>
-        <ul class="pagination">
-          <li><a class="pagination__link pagination__link--current">1</a></li>
-          <li><a class="pagination__link" href="#">2</a></li>
-          <li><a class="pagination__link" href="#">3</a></li>
-          <li><a class="pagination__link" href="#">Следующая</a></li>
+        <ul class="pagination" aria-label="Список страниц раздела">
+          <li><a class="pagination__link pagination__link--current" aria-label="На первую страницу">1</a></li>
+          <li><a class="pagination__link" href="#" aria-label="На вторую страницу">2</a></li>
+          <li><a class="pagination__link" href="#" aria-label="На третью страницу">3</a></li>
+          <li><a class="pagination__link" href="#" aria-label="На следующую страницу">Следующая</a></li>
         </ul>
       </section>
 
