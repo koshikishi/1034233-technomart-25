@@ -10,12 +10,14 @@
         <a class="logo" href="index.html">
           <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47">
         </a>
-        <span class="header__search">Поиск:</span> <!-- Позже здесь будет форма поиска -->
+        <form class="header__search" action="" method="get">
+          <input type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
+        </form>
         <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
         <a class="header__button header__button--cart header__button--full" href="cart.html">Корзина: 10</a>
         <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
       </div>
-      <p class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <p class="header__title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
       <p class="header__contacts">
         <b>+7 (812) 555-05-55</b>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -55,7 +57,47 @@
 
       <section class="filters">
         <h2 class="filters__title">Фильтр:</h2>
-        <!-- Позже здесь будет форма фильтра товаров -->
+        <form class="filters-form" action="" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+            <!-- Позже здесь будет блок с фильтром цены -->
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-bosch" type="checkbox" name="bosch" checked>
+              <label for="filter-bosch">Bosch</label>
+            </div>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-interskol" type="checkbox" name="interskol">
+              <label for="filter-interskol">Интерскол</label>
+            </div>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-makita" type="checkbox" name="makita" checked>
+              <label for="filter-makita">Makita</label>
+            </div>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-dewalt" type="checkbox" name="dewalt">
+              <label for="filter-dewalt">Dewalt</label>
+            </div>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-hitachi" type="checkbox" name="hitachi">
+              <label for="filter-hitachi">Hitachi</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-battery" type="radio" name="power" value="battery" checked>
+              <label for="filter-battery">Аккумуляторные</label>
+            </div>
+            <div class="filters-form__option">
+              <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-mains-supply" type="radio" name="power" value="mains-supply">
+              <label for="filter-mains-supply">Сетевые</label>
+            </div>
+          </fieldset>
+          <button class="button button--filters" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="sorting">
@@ -274,11 +316,11 @@
           <li><a class="social__button social__button--in" href="#">Инстаграм</a></li>
         </ul>
         <p>
-          Обратная связь:<br>
+          Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p>
-          Разработано —<br>
+          Разработано —
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
@@ -286,8 +328,12 @@
 
     <section class="modal modal--cart">
       <h2 class="visually-hidden">Добавление товара в корзину</h2>
-      <!-- Позже здесь будет содержимое всплывающего окна -->
-      <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
+      <b>Товар добавлен в корзину!</b>
+      <div class="modal__buttons">
+        <a class="button" href="order.html">Оформить заказ</a>
+        <a class="button button--continue" href="#">Продолжить покупки</a>
+      </div>
+      <button class="modal__close" type="button">Закрыть</button>
     </section>
   </body>
 </html>

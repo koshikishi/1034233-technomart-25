@@ -10,12 +10,14 @@
         <a class="logo">
           <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47">
         </a>
-        <span class="header__search">Поиск:</span> <!-- Позже здесь будет форма поиска -->
+        <form class="header__search" action="" method="get">
+          <input type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
+        </form>
         <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
         <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
         <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
       </div>
-      <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <h1 class="header__title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
       <p class="header__contacts">
         <b>+7 (812) 555-05-55</b>
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -241,10 +243,9 @@
 
       <section class="contacts">
         <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами,<br>
-        заехав в наш офис:</p>
+        <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <a class="contacts__map-image" href="map.html">
-          <img src="img/map-small.jpg" alt="Карта с местоположением нашего офиса" width="300" height="158">
+          <img src="img/map-small.jpg" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="300" height="158">
         </a>
         <a class="button" href="write-us.html">Заблудились? Напишите нам!</a>
       </section>
@@ -284,11 +285,11 @@
           <li><a class="social__button social__button--in" href="#">Инстаграм</a></li>
         </ul>
         <p>
-          Обратная связь:<br>
+          Обратная связь:
           <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
         <p>
-          Разработано —<br>
+          Разработано —
           <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
@@ -296,14 +297,30 @@
 
     <section class="modal modal--contacts">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <!-- Позже здесь будет форма обратной связи -->
-      <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
+      <form class="contacts-form" action="" method="post">
+        <div class="contacts-form__item">
+          <label for="contacts-name">Ваше имя:</label>
+          <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="contacts-form__item">
+          <label for="contacts-email">Ваш e-mail:</label>
+          <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="contacts-form__item">
+          <label for="contacts-message">Текст письма:</label>
+          <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="modal__buttons">
+          <button class="button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal__close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal--map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <!-- Позже здесь будет карта -->
-      <span class="modal__close">x</span> <!-- Позже будет кнопка закрытия окна -->
+      <img src="img/map-large.png" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="940" height="446">
+      <button class="modal__close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
