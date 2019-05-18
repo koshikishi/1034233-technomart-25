@@ -60,7 +60,18 @@
         <form class="filters-form" action="" method="get">
           <fieldset>
             <legend>Цена:</legend>
-            <!-- Позже здесь будет блок с фильтром цены -->
+            <div class="filters-form__range">
+              <div class="filters-form__track">
+                <div class="filters-form__selected"></div>
+              </div>
+              <button class="filters-form__thumb" type="button" aria-label="Минимальная цена"></button>
+              <button class="filters-form__thumb" type="button" aria-label="Максимальная цена"></button>
+            </div>
+            <div class="filters-form__price">
+              <input type="text" name="min-price" value="0">
+              —
+              <input type="text" name="max-price" value="30000">
+            </div>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
