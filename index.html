@@ -198,7 +198,8 @@
         <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <dl class="tabs services__tabs">
           <dt class="tabs__control">
-            <span class="tabs__button tabs__button--current">Доставка</span> <!-- Позже здесь будет переключатель -->
+            <input class="tabs__button tabs__button--current visually-hidden" id="tab-1" type="radio" name="tabs" checked>
+            <label for="tab-1">Доставка</label>
           </dt>
           <dd class="tabs__item tabs__item--delivery tabs__item--current">
             <h3>Доставка</h3>
@@ -206,7 +207,8 @@
             поднимая его на ваш этаж!</p>
           </dd>
           <dt class="tabs__control">
-            <span class="tabs__button">Гарантия</span> <!-- Позже здесь будет переключатель -->
+            <input class="tabs__button visually-hidden" id="tab-2" type="radio" name="tabs">
+            <label for="tab-2">Гарантия</label>
           </dt>
           <dd class="tabs__item tabs__item--warranty">
             <h3>Гарантия</h3>
@@ -215,7 +217,8 @@
             Дом уж восстановите как-нибудь сами.</p>
           </dd>
           <dt class="tabs__control">
-            <span class="tabs__button">Кредит</span> <!-- Позже здесь будет переключатель -->
+            <input class="tabs__button visually-hidden" id="tab-3" type="radio" name="tabs">
+            <label for="tab-3">Кредит</label>
           </dt>
           <dd class="tabs__item tabs__item--credit">
             <h3>Кредит</h3>
