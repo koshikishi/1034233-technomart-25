@@ -296,3 +296,28 @@ a {
 .second-nav--alternate a:focus {
   color: rgba(255, 209, 128, 0.5);
 }
+
+/* Нижняя часть подвала */
+.footer__bottom {
+  font: 16px/18px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.social {
+  list-style: none;
+}
+
+.footer__bottom a {
+  color: #ffd180;
+}
+
+.footer__bottom a:hover,
+.footer__bottom a:focus {
+  text-decoration: underline;
+}
+
+.footer__bottom a:focus {
+  color: #ee3643;
+  text-decoration: none;
+}
