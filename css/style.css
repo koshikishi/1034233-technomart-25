@@ -38,6 +38,26 @@ a {
   background-color: #ba2732;
 }
 
+.button-second {
+  font: 13px/18px "PT Sans", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.button-second:hover,
+.button-second:focus {
+  border-color: #bdc6ca;
+}
+
+.button-second:active {
+  border-color: #ee3643;
+}
+
 /* Шапка сайта */
 .header {
   background-color: #f2f6f8;
@@ -297,26 +317,6 @@ a {
 
 .filters-form__input:disabled + label {
   opacity: 0.4;
-}
-
-.filters-form__button {
-  font: 13px/18px "PT Sans", "Arial", sans-serif;
-  vertical-align: middle;
-  text-align: center;
-  color: #000000;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-}
-
-.filters-form__button:hover,
-.filters-form__button:focus {
-  border-color: #bdc6ca;
-}
-
-.filters-form__button:active {
-  border-color: #ee3643;
 }
 
 /* Карточка товара */
