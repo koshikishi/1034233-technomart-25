@@ -256,3 +256,43 @@ a {
   list-style: none;
   font: 18px/20px "Cuprum", "Arial", sans-serif;
 }
+
+/* Подвал сайта */
+.footer {
+  background-color: #32425c;
+}
+
+/* Контактные данные в подвале */
+.footer__contacts {
+  font: normal 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #f3f7f9;
+}
+
+/* Дополнительная навигация по сайту */
+.second-nav {
+  list-style: none;
+  font: 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #f1f5f7;
+}
+
+.second-nav a {
+  color: #f1f5f7;
+}
+
+.second-nav--alternate a {
+  color: #ffd180;
+}
+
+.second-nav a:hover,
+.second-nav a:focus {
+  text-decoration: underline;
+}
+
+.second-nav a:focus {
+  color: rgba(241, 245, 247, 0.5);
+  text-decoration: none;
+}
+
+.second-nav--alternate a:focus {
+  color: rgba(255, 209, 128, 0.5);
+}
