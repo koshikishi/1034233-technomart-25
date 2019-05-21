@@ -294,7 +294,7 @@ a {
 }
 
 .filters-form__input:disabled + label {
-  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.4;
 }
 
 .filters-form__button {
@@ -340,12 +340,8 @@ a {
 }
 
 .second-nav a:focus {
-  color: rgba(241, 245, 247, 0.5);
   text-decoration: none;
-}
-
-.second-nav--alternate a:focus {
-  color: rgba(255, 209, 128, 0.5);
+  opacity: 0.5;
 }
 
 /* Нижняя часть подвала */
