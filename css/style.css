@@ -1,8 +1,7 @@
+/* Базовые стили для всего сайта */
 body {
   margin: 0;
-  font-size: 13px;
-  line-height: 24px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font: 13px/24px "PT Sans", "Arial", sans-serif;
   color: #000000;
   background-color: #ffffff;
 }
@@ -11,14 +10,18 @@ a {
   text-decoration: none;
 }
 
+/* Шапка сайта */
+.header {
+  background-color: #f2f6f8;
+}
+
 .header__top {
-  font-size: 17px;
-  line-height: 18px;
-  font-family: "Cuprum", "Arial", sans-serif;
+  font: 17px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
 }
 
+/* Логотип сайта */
 .logo {
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
@@ -33,6 +36,7 @@ a {
   background-color: #ba2732;
 }
 
+/* Форма поиска */
 .header__search input {
   font: inherit;
   color: #ffffff;
@@ -83,6 +87,7 @@ a {
   background-color: #ffffff;
 }
 
+/* Ссылки для заказа */
 .header__button {
   color: #ffffff;
 }
@@ -94,7 +99,7 @@ a {
 
 .header__button:active {
   background-color: #161d29;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .header__button--full {
@@ -121,5 +126,69 @@ a {
 
 .header__button--order:active {
   background-color: #518534;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Заголовок сайта */
+.header__title {
+  font: italic 16px/23px "Cuprum", "Arial", sans-serif;
+  color: #ee3643;
+}
+
+/* Контактные данные */
+.header__contacts {
+  font: 14px/24px "Cuprum", "Arial", sans-serif;
+  color: #32425c;
+  border: 3px solid #ffffff;
+}
+
+.header__contacts b {
+  font: 21px/21px "Cuprum", "Arial", sans-serif;
+  color: #ee3643;
+}
+
+/* Пользовательская навигация */
+.user-nav {
+  font: 21px/21px "Cuprum", "Arial", sans-serif;
+  color: #000000;
+}
+
+.user-nav__button {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user-nav__button:hover,
+.user-nav__button:focus {
+  color: #ee3643;
+}
+
+.user-nav__button--profile:hover,
+.user-nav__button--profile:focus,
+.user-nav__button--logout:hover,
+.user-nav__button--logout:focus {
+  color: #000000;
+}
+
+.user-nav__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-nav__account {
+  font: 16px/18px "Cuprum", "Arial", sans-serif;
+  color: #32425c;
+}
+
+.user-nav__account a {
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-nav__account a:hover,
+.user-nav__account a:focus {
+  color: #ee3643;
+}
+
+.user-nav__account a:active {
+  color: rgba(50, 66, 92, 0.3);
 }
