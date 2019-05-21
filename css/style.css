@@ -310,6 +310,15 @@ a {
   border-radius: 3px;
 }
 
+.filters-form__button:hover,
+.filters-form__button:focus {
+  border-color: #bdc6ca;
+}
+
+.filters-form__button:active {
+  border-color: #ee3643;
+}
+
 /* Карточка товара */
 .product {
   text-align: center;
