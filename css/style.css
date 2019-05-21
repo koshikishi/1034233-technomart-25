@@ -256,8 +256,7 @@ a {
 /* «Хлебные крошки» */
 .breadcrumbs {
   list-style: none;
-  font: 13px/18px "PT Sans", "Arial", sans-serif;
-  color: #000000;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
@@ -284,12 +283,15 @@ a {
 }
 
 .filters-form legend {
-  font: bold 17px/30px "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
 .filters-form__option {
-  font: 15px/20px "PT Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
@@ -321,11 +323,13 @@ a {
 }
 
 .product__title {
-  font: bold 18px/20px "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .product__title a {
-  color: #000000;
+  color: inherit;
 }
 
 .product__model {
@@ -333,7 +337,9 @@ a {
 }
 
 .product__price {
-  font: bold 17px/18px "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
   text-transform: uppercase;
 }
 
