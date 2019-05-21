@@ -10,3 +10,116 @@ body {
 a {
   text-decoration: none;
 }
+
+.header__top {
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.logo {
+  background-color: #ee3643;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
+}
+
+.logo[href]:hover,
+.logo[href]:focus {
+  background-color: #ca2c37;
+}
+
+.logo[href]:active {
+  background-color: #ba2732;
+}
+
+.header__search input {
+  font: inherit;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.header__search input::-moz-placeholder {
+  opacity: 1;
+}
+
+.header__search input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input::placeholder {
+  opacity: 1;
+}
+
+.header__search input:hover {
+  background-color: #212a3a;
+}
+
+.header__search input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header__search button {
+  background-color: transparent;
+  border: none;
+}
+
+.header__search button:hover,
+.header__search button:focus {
+  background-color: #212a3a;
+}
+
+.header__search input:focus + button {
+  background-color: #ffffff;
+}
+
+.header__button {
+  color: #ffffff;
+}
+
+.header__button:hover,
+.header__button:focus {
+  background-color: #212a3a;
+}
+
+.header__button:active {
+  background-color: #161d29;
+  opacity: 0.6;
+}
+
+.header__button--full {
+  background-color: #ee3643;
+}
+
+.header__button--full:hover,
+.header__button--full:focus {
+  background-color: #ca2c37;
+}
+
+.header__button--full:active {
+  background-color: #ba2732;
+}
+
+.header__button--order {
+  background-color: #63a63e;
+}
+
+.header__button--order:hover,
+.header__button--order:focus {
+  background-color: #5fbb2d;
+}
+
+.header__button--order:active {
+  background-color: #518534;
+  opacity: 0.5;
+}
