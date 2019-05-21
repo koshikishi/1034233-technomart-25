@@ -40,7 +40,7 @@ a {
 .header__search input {
   font: inherit;
   color: #ffffff;
-  background-color: transparent;
+  background-color: #293449;
   border: none;
 }
 
@@ -74,7 +74,7 @@ a {
 }
 
 .header__search button {
-  background-color: transparent;
+  background-color: #293449;
   border: none;
 }
 
@@ -90,6 +90,7 @@ a {
 /* Ссылки для заказа */
 .header__button {
   color: #ffffff;
+  background-color: #293449;
 }
 
 .header__button:hover,
@@ -139,12 +140,12 @@ a {
 .header__contacts {
   font: 14px/24px "Cuprum", "Arial", sans-serif;
   color: #32425c;
-  border: 3px solid #ffffff;
 }
 
 .header__contacts b {
   font: 21px/21px "Cuprum", "Arial", sans-serif;
   color: #ee3643;
+  border: 3px solid #ffffff;
 }
 
 /* Пользовательская навигация */
@@ -191,4 +192,29 @@ a {
 
 .user-nav__account a:active {
   color: rgba(50, 66, 92, 0.3);
+}
+
+/* Основная навигация по сайту */
+.site-nav {
+  list-style: none;
+  font: 17px/17px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.site-nav a {
+  color: #ffffff;
+  background-color: #32425c;
+  box-shadow: inset 0 -5px #293449;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: #293449;
+  box-shadow: none;
+}
+
+.site-nav a:focus {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
 }
