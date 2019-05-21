@@ -242,7 +242,7 @@ a {
   box-shadow: none;
 }
 
-.site-nav a:focus {
+.site-nav a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
 }
@@ -416,7 +416,7 @@ a {
   text-decoration: underline;
 }
 
-.second-nav a:focus {
+.second-nav a:active {
   text-decoration: none;
   opacity: 0.5;
 }
@@ -443,7 +443,7 @@ a {
   text-decoration: underline;
 }
 
-.footer__bottom a:focus {
+.footer__bottom a:active {
   color: #ee3643;
   text-decoration: none;
 }
