@@ -10,6 +10,38 @@ a {
   text-decoration: none;
 }
 
+/* Стили для заголовков сайта */
+.title {
+  font: 30px/30px "Cuprum", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.title--heading {
+  color: #32425c;
+}
+
+/* Стили для кнопок сайта */
+.button {
+  font: 14px/18px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
 /* Шапка сайта */
 .header {
   background-color: #f2f6f8;
@@ -217,4 +249,10 @@ a {
 .site-nav a:focus {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
+}
+
+/* Список в блоке о компании */
+.about__list {
+  list-style: none;
+  font: 18px/20px "Cuprum", "Arial", sans-serif;
 }
