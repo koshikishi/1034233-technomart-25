@@ -308,6 +308,77 @@ a {
   border-radius: 3px;
 }
 
+/* Карточка товара */
+.product {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.product:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.product__title {
+  font: bold 18px/20px "PT Sans", "Arial", sans-serif;
+}
+
+.product__title a {
+  color: #000000;
+}
+
+.product__model {
+  text-transform: uppercase;
+}
+
+.product__price {
+  font: bold 17px/18px "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.product__price s {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product__price b {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.button--buy {
+  background-color: #63a63e;
+  box-shadow: inset 0 -3px #367315;
+}
+
+.button--buy:hover,
+.button--buy:focus {
+  background-color: #5fbb2d;
+}
+
+.button--buy:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.button--bookmarks {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.button--bookmarks:hover,
+.button--bookmarks:focus {
+  background-color: inherit;
+  border-color: #32425c;
+}
+
+.button--bookmarks:active {
+  background-color: inherit;
+  opacity: 0.3;
+}
+
 /* Подвал сайта */
 .footer {
   background-color: #32425c;
