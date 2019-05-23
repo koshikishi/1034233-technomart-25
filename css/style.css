@@ -423,6 +423,38 @@ a {
   opacity: 0.3;
 }
 
+/* Слайдер сервисов */
+.services {
+  background-color: #f2f6f8;
+}
+
+.tabs__button {
+  font: bold 21px/30px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: left;
+  color: #ffffff;
+  background-color: #32425c;
+  border: none;
+}
+
+.tabs__button:hover,
+.tabs__button:focus {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.tabs__button:active,
+.tabs__button--current {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.title--tabs {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+}
+
 /* Список в блоке о компании */
 .about__list {
   list-style: none;
