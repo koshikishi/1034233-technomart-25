@@ -403,6 +403,26 @@ a {
   opacity: 0.3;
 }
 
+/* Карточки производителей */
+.brands__link {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.brands__link:hover,
+.brands__link:focus {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.brands__link:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+}
+
+.brands__link:active img {
+  opacity: 0.3;
+}
+
 /* Список в блоке о компании */
 .about__list {
   list-style: none;
