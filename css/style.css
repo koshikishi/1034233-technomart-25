@@ -1,0 +1,463 @@
+/* Базовые стили для всего сайта */
+body {
+  margin: 0;
+  font: 13px/24px "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Стили для заголовков сайта */
+.title {
+  font: 30px/30px "Cuprum", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Стили для кнопок сайта */
+.button {
+  font: 14px/18px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  border: none;
+  border-radius: 3px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
+.button-second {
+  font: 13px/18px "PT Sans", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.button-second:hover,
+.button-second:focus {
+  border-color: #bdc6ca;
+}
+
+.button-second:active {
+  border-color: #ee3643;
+}
+
+/* Шапка сайта */
+.header {
+  background-color: #f2f6f8;
+}
+
+.header__top {
+  font: 17px/18px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+/* Логотип сайта */
+.logo {
+  background-color: #ee3643;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
+}
+
+.logo[href]:hover,
+.logo[href]:focus {
+  background-color: #ca2c37;
+}
+
+.logo[href]:active {
+  background-color: #ba2732;
+}
+
+/* Форма поиска */
+.header__search input {
+  font: inherit;
+  color: #ffffff;
+  background-color: #293449;
+  border: none;
+}
+
+.header__search input::-moz-placeholder {
+  opacity: 1;
+}
+
+.header__search input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.header__search input::placeholder {
+  opacity: 1;
+}
+
+.header__search input:hover {
+  background-color: #212a3a;
+}
+
+.header__search input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header__search button {
+  background-color: #293449;
+  border: none;
+}
+
+.header__search button:hover,
+.header__search button:focus {
+  background-color: #212a3a;
+}
+
+.header__search input:focus + button {
+  background-color: #ffffff;
+}
+
+/* Ссылки для заказа */
+.header__button {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.header__button:hover,
+.header__button:focus {
+  background-color: #212a3a;
+}
+
+.header__button:active {
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header__button--full {
+  background-color: #ee3643;
+}
+
+.header__button--full:hover,
+.header__button--full:focus {
+  background-color: #ca2c37;
+}
+
+.header__button--full:active {
+  background-color: #ba2732;
+}
+
+.header__button--order {
+  background-color: #63a63e;
+}
+
+.header__button--order:hover,
+.header__button--order:focus {
+  background-color: #5fbb2d;
+}
+
+.header__button--order:active {
+  background-color: #518534;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Заголовок сайта */
+.header__title {
+  font: italic 16px/23px "Cuprum", "Arial", sans-serif;
+  color: #ee3643;
+}
+
+/* Контактные данные */
+.header__contacts {
+  font: 14px/24px "Cuprum", "Arial", sans-serif;
+  color: #32425c;
+}
+
+.header__contacts b {
+  font: 21px/21px "Cuprum", "Arial", sans-serif;
+  color: #ee3643;
+  border: 3px solid #ffffff;
+}
+
+/* Пользовательская навигация */
+.user-nav {
+  font: 21px/21px "Cuprum", "Arial", sans-serif;
+  color: #000000;
+}
+
+.user-nav__button {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.user-nav__button:hover,
+.user-nav__button:focus {
+  color: #ee3643;
+}
+
+.user-nav__button--profile:hover,
+.user-nav__button--profile:focus,
+.user-nav__button--logout:hover,
+.user-nav__button--logout:focus {
+  color: #000000;
+}
+
+.user-nav__button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.user-nav__account {
+  font: 16px/18px "Cuprum", "Arial", sans-serif;
+  color: #32425c;
+}
+
+.user-nav__account a {
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.user-nav__account a:hover,
+.user-nav__account a:focus {
+  color: #ee3643;
+}
+
+.user-nav__account a:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+/* Основная навигация по сайту */
+.site-nav {
+  list-style: none;
+  font: 17px/17px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.site-nav a {
+  color: #ffffff;
+  background-color: #32425c;
+  box-shadow: inset 0 -5px #293449;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: #293449;
+  box-shadow: none;
+}
+
+.site-nav a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
+}
+
+/* Список в блоке о компании */
+.about__list {
+  list-style: none;
+  font: 18px/20px "Cuprum", "Arial", sans-serif;
+}
+
+/* «Хлебные крошки» */
+.breadcrumbs {
+  list-style: none;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__link {
+  color: #000000;
+}
+
+/* Заголовок страницы каталога */
+.heading--light {
+  background-color: #f2f6f8;
+}
+
+.title--heading {
+  color: #32425c;
+}
+
+/* Фильтр товаров */
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form fieldset:not(:last-of-type) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters-form legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filters-form__option {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filters-form__input:disabled + label {
+  opacity: 0.4;
+}
+
+/* Карточка товара */
+.product {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
+.product:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.product__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.product__title a {
+  color: inherit;
+}
+
+.product__model {
+  text-transform: uppercase;
+}
+
+.product__price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.product__price s {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.product__price b {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.button--buy {
+  background-color: #63a63e;
+  box-shadow: inset 0 -3px #367315;
+}
+
+.button--buy:hover,
+.button--buy:focus {
+  background-color: #5fbb2d;
+}
+
+.button--buy:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.button--bookmarks {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.button--bookmarks:hover,
+.button--bookmarks:focus {
+  background-color: inherit;
+  border-color: #32425c;
+}
+
+.button--bookmarks:active {
+  background-color: inherit;
+  opacity: 0.3;
+}
+
+/* Подвал сайта */
+.footer {
+  background-color: #32425c;
+}
+
+/* Контактные данные в подвале */
+.footer__contacts {
+  font: normal 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #f3f7f9;
+}
+
+/* Дополнительная навигация по сайту */
+.second-nav {
+  list-style: none;
+  font: 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #f1f5f7;
+}
+
+.second-nav a {
+  color: #f1f5f7;
+}
+
+.second-nav--alternate a {
+  color: #ffd180;
+}
+
+.second-nav a:hover,
+.second-nav a:focus {
+  text-decoration: underline;
+}
+
+.second-nav a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+/* Нижняя часть подвала */
+.footer__bottom {
+  font: 16px/18px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  background-color: #293449;
+}
+
+/* Социальные кнопки */
+.social {
+  list-style: none;
+}
+
+/* Стили ссылок нижней части подвала */
+.footer__bottom a {
+  color: #ffd180;
+}
+
+.footer__bottom a:hover,
+.footer__bottom a:focus {
+  text-decoration: underline;
+}
+
+.footer__bottom a:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+/* Всплывающие окна */
+.modal {
+  display: none;
+}

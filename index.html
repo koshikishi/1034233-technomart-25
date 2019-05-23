@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт — Интернет-магазин строительных материалов и инструментов для ремонта</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
       <div class="header__top">
         <a class="logo">
-          <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="47">
+          <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="109" height="19">
         </a>
-        <form class="header__search" action="" method="get">
+        <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
           <input type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
+          <button type="submit">Искать</button>
         </form>
         <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
         <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
@@ -66,8 +70,8 @@
           <input class="slider__radio visually-hidden" id="slider-1" type="radio" name="slider">
           <input class="slider__radio visually-hidden" id="slider-2" type="radio" name="slider" checked>
           <div class="slider__control">
-            <label for="slider-1" aria-label="Первый слайд «Перфораторы»"></label>
-            <label for="slider-2" aria-label="Второй слайд «Дрели»"></label>
+            <label for="slider-1">Первый слайд «Перфораторы»</label>
+            <label for="slider-2">Второй слайд «Дрели»</label>
           </div>
           <div class="slider__inner">
             <div class="slider__item">
@@ -91,7 +95,7 @@
         </div>
         <div class="popular__list">
           <article class="product">
-            <h3>
+            <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
                 <span class="product__model">Bosch BFG 9000</span>
@@ -108,7 +112,7 @@
             </p>
           </article>
           <article class="product">
-            <h3>
+            <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
                 <span class="product__model">Bosch BFG 3000</span>
@@ -125,7 +129,7 @@
             </p>
           </article>
           <article class="product">
-            <h3>
+            <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
                 <span class="product__model">Bosch BFG 6000</span>
@@ -142,7 +146,7 @@
             </p>
           </article>
           <article class="product product--new">
-            <h3>
+            <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
                 <span class="product__model">Bosch BFG 2000</span>
@@ -198,42 +202,48 @@
         <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <dl class="tabs services__tabs">
           <dt class="tabs__control">
-            <input class="tabs__button tabs__button--current visually-hidden" id="tab-1" type="radio" name="tabs" checked>
-            <label for="tab-1">Доставка</label>
+            <button class="tabs__button tabs__button--current" type="button">Доставка</button>
           </dt>
           <dd class="tabs__item tabs__item--delivery tabs__item--current">
             <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж!</p>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо<br>
+              к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!
+            </p>
           </dd>
           <dt class="tabs__control">
-            <input class="tabs__button visually-hidden" id="tab-2" type="radio" name="tabs">
-            <label for="tab-2">Гарантия</label>
+            <button class="tabs__button" type="button">Гарантия</button>
           </dt>
           <dd class="tabs__item tabs__item--warranty">
             <h3>Гарантия</h3>
-            <p>Если купленный у нас товар поломается или заискрит,<br>
-            а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-            Дом уж восстановите как-нибудь сами.</p>
+            <p>
+              Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.
+            </p>
           </dd>
           <dt class="tabs__control">
-            <input class="tabs__button visually-hidden" id="tab-3" type="radio" name="tabs">
-            <label for="tab-3">Кредит</label>
+            <button class="tabs__button" type="button">Кредит</button>
           </dt>
           <dd class="tabs__item tabs__item--credit">
             <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще!<br>
-            Кредитные консультанты придут вам на помощь.</p>
+            <p>
+              Залезть в долговую яму стало проще!<br>
+              Кредитные консультанты придут вам на помощь.
+            </p>
             <a class="button" href="#">Отправить заявку</a>
           </dd>
         </dl>
       </section>
 
       <section class="about">
-        <h2>Компания «Техномарт»</h2>
+        <h2 class="title">Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-        Техномарт работает со многими транспортными компаниями:</p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          Техномарт работает со многими транспортными компаниями:
+        </p>
         <ul class="about__list">
           <li>Деловые линии</li>
           <li>Автотрейдинг</li>
@@ -243,10 +253,10 @@
       </section>
 
       <section class="contacts">
-        <h2>Контакты</h2>
+        <h2 class="title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <a class="contacts__map-image" href="map.html">
-          <img src="img/map-small.jpg" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="300" height="158">
+          <img src="img/map-small.png" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="300" height="158">
         </a>
         <a class="button" href="write-us.html">Заблудились? Напишите нам!</a>
       </section>
@@ -254,21 +264,21 @@
 
     <footer class="footer">
       <a class="logo logo--footer footer__logo">
-        <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="220" height="68">
+        <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="138" height="23">
       </a>
       <address class="footer__contacts">
         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
         +7 (812) 555-05-55
       </address>
       <div class="footer__nav">
-        <ul class="site-nav">
+        <ul class="second-nav">
           <li><a href="about.html">Компания</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul class="site-nav site-nav--second">
+        <ul class="second-nav second-nav--alternate">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
           <li><a href="#">Инструмент</a></li>
@@ -281,9 +291,9 @@
           Все права защищены
         </p>
         <ul class="social footer__social">
-          <li><a class="social__button social__button--vk" href="#">Вконтакте</a></li>
-          <li><a class="social__button social__button--fb" href="#">Фейсбук</a></li>
-          <li><a class="social__button social__button--in" href="#">Инстаграм</a></li>
+          <li><a class="social__button social__button--vk" href="#">Компания «Техномарт» во ВКонтакте</a></li>
+          <li><a class="social__button social__button--fb" href="#">Компания «Техномарт» на Фейсбуке</a></li>
+          <li><a class="social__button social__button--in" href="#">Компания «Техномарт» в Инстаграме</a></li>
         </ul>
         <p>
           Обратная связь:
@@ -298,7 +308,7 @@
 
     <section class="modal modal--contacts">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="contacts-form" action="" method="post">
+      <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="contacts-form__item">
           <label for="contacts-name">Ваше имя:</label>
           <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -320,7 +330,7 @@
 
     <section class="modal modal--map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/map-large.png" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="940" height="446">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6509465573246!2d30.322500229274443!3d59.93871649886725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1558345574596!5m2!1sru!2sru" width="940" height="446" aria-label="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" allowfullscreen></iframe>
       <button class="modal__close" type="button">Закрыть</button>
     </section>
   </body>
