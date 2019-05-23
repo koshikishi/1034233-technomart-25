@@ -13,7 +13,6 @@ a {
 /* Стили для заголовков сайта */
 .title {
   font: 30px/30px "Cuprum", "Arial", sans-serif;
-  color: #000000;
   text-transform: uppercase;
 }
 
@@ -87,28 +86,13 @@ a {
 /* Форма поиска */
 .header__search input {
   font: inherit;
-  color: #ffffff;
+  color: inherit;
   background-color: #293449;
   border: none;
 }
 
-.header__search input::-moz-placeholder {
-  opacity: 1;
-}
-
-.header__search input::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.header__search input:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.header__search input::-ms-input-placeholder {
-  opacity: 1;
-}
-
 .header__search input::placeholder {
+  color: inherit;
   opacity: 1;
 }
 
@@ -137,7 +121,7 @@ a {
 
 /* Ссылки для заказа */
 .header__button {
-  color: #ffffff;
+  color: inherit;
   background-color: #293449;
 }
 
@@ -199,7 +183,6 @@ a {
 /* Пользовательская навигация */
 .user-nav {
   font: 21px/21px "Cuprum", "Arial", sans-serif;
-  color: #000000;
 }
 
 .user-nav__button {
@@ -229,7 +212,7 @@ a {
 }
 
 .user-nav__account a {
-  color: #32425c;
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -251,7 +234,7 @@ a {
 }
 
 .site-nav a {
-  color: #ffffff;
+  color: inherit;
   background-color: #32425c;
   box-shadow: inset 0 -5px #293449;
 }
@@ -413,7 +396,7 @@ a {
 }
 
 .second-nav a {
-  color: #f1f5f7;
+  color: inherit;
 }
 
 .second-nav--alternate a {
