@@ -60,21 +60,21 @@
       </div>
 
       <section class="filters">
-        <h2 class="filters__title">Фильтр:</h2>
+        <h2 class="title-small">Фильтр:</h2>
         <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена:</legend>
-            <div class="filters-form__range">
-              <div class="filters-form__track">
-                <div class="filters-form__selected"></div>
+            <div class="filters-form__slider">
+              <div class="filters-form__range">
+                <div class="filters-form__track"></div>
               </div>
               <button class="filters-form__thumb" type="button">Минимальная цена</button>
               <button class="filters-form__thumb" type="button">Максимальная цена</button>
             </div>
             <div class="filters-form__price">
-              <input type="text" name="min-price" value="0" aria-label="Минимальная цена">
+              <input type="number" name="min-price" value="0" aria-label="Минимальная цена">
               —
-              <input type="text" name="max-price" value="30000" aria-label="Максимальная цена">
+              <input type="number" name="max-price" value="30000" aria-label="Максимальная цена">
             </div>
           </fieldset>
           <fieldset>
@@ -116,7 +116,7 @@
       </section>
 
       <section class="sorting">
-        <h2 class="sorting__title">Сортировка:</h2>
+        <h2 class="title-small">Сортировка:</h2>
         <div class="sorting__type">
           <a class="sorting__button sorting__button--active" href="#">По цене</a>
           <a class="sorting__button" href="#">По типу</a>

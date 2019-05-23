@@ -16,6 +16,13 @@ a {
   text-transform: uppercase;
 }
 
+.title-small {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
+
 /* Стили для кнопок сайта */
 .button {
   font: 14px/18px "Cuprum", "Arial", sans-serif;
@@ -491,6 +498,34 @@ a {
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.filters-form__slider {
+  background-color: #f7f3ec;
+}
+
+.filters-form__range {
+  background-color: #d7dcde;
+}
+
+.filters-form__track {
+  background-color: #00ca74;
+}
+
+.filters-form__price {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.filters-form__price input {
+  font: inherit;
+  font-size: 17px;
+  text-align: center;
+  color: #000000;
+  background-color: #f7f3ec;
+  border: none;
 }
 
 .filters-form__option {
