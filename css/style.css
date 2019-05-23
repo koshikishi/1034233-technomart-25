@@ -562,6 +562,25 @@ a {
   border: none;
 }
 
+/* Пагинация */
+.pagination {
+  list-style: none;
+}
+
+.button-second--current,
+.button-second--current:hover,
+.button-second--current:focus,
+.button-second--current:active {
+  color: #ffffff;
+  background-color: #ee3643;
+  border-color: #ee3643;
+}
+
+/* Описание категории товара */
+.description {
+  background-color: #f2f6f8;
+}
+
 /* Подвал сайта */
 .footer {
   background-color: #32425c;
