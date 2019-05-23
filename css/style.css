@@ -293,6 +293,32 @@ a {
   background-color: #ffc047;
 }
 
+/* Слайдер промо-блока */
+.slider {
+  font: 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.slider__item {
+  background-color: #c5c5c5;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slider__item:nth-of-type(1) {
+  background-image: url("../img/slider-1.jpg");
+}
+
+.slider__item:nth-of-type(2) {
+  background-image: url("../img/slider-2.jpg");
+}
+
+.title--slide {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
 /* Список в блоке о компании */
 .about__list {
   list-style: none;
