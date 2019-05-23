@@ -112,6 +112,10 @@ a {
   background-color: #ffffff;
 }
 
+.header__search input:focus::placeholder {
+  opacity: 0.4;
+}
+
 .header__search button {
   background-color: #293449;
   border: none;
