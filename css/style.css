@@ -538,6 +538,30 @@ a {
   opacity: 0.4;
 }
 
+/* Сортировка товаров */
+.sorting {
+  background-color: #f7f3ec;
+}
+
+.sorting__button {
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting__button:hover,
+.sorting__button:focus {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting__button:active,
+.sorting__button--active {
+  color: #ee3643;
+  border: none;
+}
+
 /* Подвал сайта */
 .footer {
   background-color: #32425c;
