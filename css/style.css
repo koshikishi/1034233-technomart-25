@@ -220,6 +220,7 @@ a {
   width: 200px;
   margin: 0;
   margin-right: 20px;
+  margin-bottom: 43px;
   padding-top: 6px;
   padding-right: 50px;
   padding-left: 50px;
@@ -231,7 +232,6 @@ a {
 .header__contacts {
   width: 270px;
   margin: 0;
-  margin-bottom: 44px;
   margin-right: auto;
   font: 14px/24px "Cuprum", "Arial", sans-serif;
   color: #32425c;
@@ -560,6 +560,7 @@ a {
 
 /* «Хлебные крошки» */
 .main__breadcrumbs {
+  margin-top: 20px;
   margin-bottom: 24px;
 }
 
