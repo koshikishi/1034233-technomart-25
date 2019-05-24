@@ -19,12 +19,6 @@ a {
   padding-left: 10px;
 }
 
-/* Блок колонок */
-.columns {
-  display: flex;
-  justify-content: space-between;
-}
-
 /* Стили для заголовков сайта */
 .title {
   margin: 0;
@@ -519,6 +513,12 @@ a {
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
+}
+
+/* Блок колонок */
+.index-columns {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Блок о компании */
