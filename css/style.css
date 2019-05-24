@@ -84,6 +84,10 @@ a {
   background-color: #f2f6f8;
 }
 
+.inner-page .header {
+  margin-bottom: 23px;
+}
+
 .header__top {
   margin-bottom: 46px;
   font: 17px/18px "Cuprum", "Arial", sans-serif;
@@ -382,7 +386,15 @@ a {
 }
 
 /* Заголовок раздела на главной странице */
+.main__heading {
+  margin-bottom: 20px;
+}
+
 .heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+  padding-right: 24px;
   background-color: #f9f5f0;
 }
 
@@ -544,6 +556,10 @@ a {
 }
 
 /* «Хлебные крошки» */
+.main__breadcrumbs {
+  margin-bottom: 24px;
+}
+
 .breadcrumbs {
   line-height: 18px;
   text-transform: uppercase;
@@ -558,7 +574,23 @@ a {
   background-color: #f2f6f8;
 }
 
+/* Блок колонок */
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.catalog-columns__column {
+  width: 700px;
+}
+
 /* Фильтр товаров */
+.filters {
+  width: 220px;
+}
+
 .filters-form {
   text-transform: uppercase;
 }
