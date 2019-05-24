@@ -316,18 +316,19 @@ a {
   background-position: 0 0;
 }
 
-.slider__item:nth-of-type(1) {
+.slider__item--perforator {
   background-image: url("../img/slider-1.jpg");
 }
 
-.slider__item:nth-of-type(2) {
+.slider__item--drill {
   background-image: url("../img/slider-2.jpg");
 }
 
-.title--slide {
+.slider__title {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 /* Заголовок раздела на главной странице */
@@ -468,6 +469,8 @@ a {
 
 /* Список в блоке о компании */
 .about__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font: 18px/20px "Cuprum", "Arial", sans-serif;
 }
@@ -489,6 +492,10 @@ a {
 }
 
 /* Фильтр товаров */
+.filters-form {
+  text-transform: uppercase;
+}
+
 .filters-form fieldset {
   border: none;
 }
@@ -501,7 +508,6 @@ a {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
-  text-transform: uppercase;
 }
 
 .filters-form__slider {
@@ -520,7 +526,6 @@ a {
   font-size: 16px;
   line-height: 18px;
   color: #444444;
-  text-transform: uppercase;
 }
 
 .filters-form__price input {
@@ -535,7 +540,6 @@ a {
 .filters-form__option {
   font-size: 15px;
   line-height: 20px;
-  text-transform: uppercase;
 }
 
 .filters-form__input:disabled + label {
@@ -544,13 +548,13 @@ a {
 
 /* Сортировка товаров */
 .sorting {
+  text-transform: uppercase;
   background-color: #f7f3ec;
 }
 
 .sorting__button {
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
   border-bottom: 1px dotted #ee3643;
 }
 
