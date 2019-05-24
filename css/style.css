@@ -42,6 +42,7 @@ a {
   background-color: #ee3643;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -62,6 +63,7 @@ a {
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .button-second:hover,
@@ -142,6 +144,7 @@ a {
 .header__search button {
   background-color: #293449;
   border: none;
+  cursor: pointer;
 }
 
 .header__search button:hover,
@@ -489,6 +492,7 @@ a {
   color: #ffffff;
   background-color: #32425c;
   border: none;
+  cursor: pointer;
 }
 
 .tabs__button:hover,
