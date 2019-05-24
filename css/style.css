@@ -13,8 +13,14 @@ a {
 /* Стили для заголовков сайта */
 .title {
   font: 30px/30px "Cuprum", "Arial", sans-serif;
-  color: #000000;
   text-transform: uppercase;
+}
+
+.title-small {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #f7f3ec;
 }
 
 /* Стили для кнопок сайта */
@@ -87,28 +93,13 @@ a {
 /* Форма поиска */
 .header__search input {
   font: inherit;
-  color: #ffffff;
+  color: inherit;
   background-color: #293449;
   border: none;
 }
 
-.header__search input::-moz-placeholder {
-  opacity: 1;
-}
-
-.header__search input::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.header__search input:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.header__search input::-ms-input-placeholder {
-  opacity: 1;
-}
-
 .header__search input::placeholder {
+  color: inherit;
   opacity: 1;
 }
 
@@ -119,6 +110,10 @@ a {
 .header__search input:focus {
   color: #000000;
   background-color: #ffffff;
+}
+
+.header__search input:focus::placeholder {
+  opacity: 0.4;
 }
 
 .header__search button {
@@ -137,7 +132,7 @@ a {
 
 /* Ссылки для заказа */
 .header__button {
-  color: #ffffff;
+  color: inherit;
   background-color: #293449;
 }
 
@@ -199,7 +194,6 @@ a {
 /* Пользовательская навигация */
 .user-nav {
   font: 21px/21px "Cuprum", "Arial", sans-serif;
-  color: #000000;
 }
 
 .user-nav__button {
@@ -229,7 +223,7 @@ a {
 }
 
 .user-nav__account a {
-  color: #32425c;
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -251,7 +245,7 @@ a {
 }
 
 .site-nav a {
-  color: #ffffff;
+  color: inherit;
   background-color: #32425c;
   box-shadow: inset 0 -5px #293449;
 }
@@ -267,56 +261,82 @@ a {
   background-color: #1d2739;
 }
 
-/* Список в блоке о компании */
-.about__list {
-  list-style: none;
-  font: 18px/20px "Cuprum", "Arial", sans-serif;
+/* Карточки промо-блока */
+.promo-card {
+  color: #ffffff;
+  background-color: #c5c5c5;
 }
 
-/* «Хлебные крошки» */
-.breadcrumbs {
-  list-style: none;
-  line-height: 18px;
-  text-transform: uppercase;
+.promo-card h3 {
+  font: bold 24px/30px "Cuprum", "Arial", sans-serif;
 }
 
-.breadcrumbs__link {
-  color: #000000;
+.button--promo {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовок страницы каталога */
-.heading--light {
-  background-color: #f2f6f8;
+.button--promo:hover,
+.button--promo:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.button--promo:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-card--material {
+  background-color: #ffbf47;
+}
+
+.promo-card--tools {
+  background-color: #3bbce3;
+}
+
+.promo-card--tech {
+  background-color: #dc91d8;
+}
+
+.promo-card--sale {
+  background-color: #8ed78f;
+}
+
+.promo-card--delivery {
+  background-color: #ffc047;
+}
+
+/* Слайдер промо-блока */
+.slider {
+  font: 18px/24px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.slider__item {
+  background-color: #c5c5c5;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slider__item:nth-of-type(1) {
+  background-image: url("../img/slider-1.jpg");
+}
+
+.slider__item:nth-of-type(2) {
+  background-image: url("../img/slider-2.jpg");
+}
+
+.title--slide {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+/* Заголовок раздела на главной странице */
+.heading {
+  background-color: #f9f5f0;
 }
 
 .title--heading {
   color: #32425c;
-}
-
-/* Фильтр товаров */
-.filters-form fieldset {
-  border: none;
-}
-
-.filters-form fieldset:not(:last-of-type) {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.filters-form legend {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 30px;
-  text-transform: uppercase;
-}
-
-.filters-form__option {
-  font-size: 15px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.filters-form__input:disabled + label {
-  opacity: 0.4;
 }
 
 /* Карточка товара */
@@ -394,6 +414,177 @@ a {
   opacity: 0.3;
 }
 
+/* Карточки производителей */
+.brands__link {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+}
+
+.brands__link:hover,
+.brands__link:focus {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.brands__link:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+}
+
+.brands__link:active img {
+  opacity: 0.3;
+}
+
+/* Слайдер сервисов */
+.services {
+  background-color: #f2f6f8;
+}
+
+.tabs__button {
+  font: bold 21px/30px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+  text-align: left;
+  color: #ffffff;
+  background-color: #32425c;
+  border: none;
+}
+
+.tabs__button:hover,
+.tabs__button:focus {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.tabs__button:active,
+.tabs__button--current {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.title--tabs {
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+}
+
+/* Список в блоке о компании */
+.about__list {
+  list-style: none;
+  font: 18px/20px "Cuprum", "Arial", sans-serif;
+}
+
+/* «Хлебные крошки» */
+.breadcrumbs {
+  list-style: none;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs__link {
+  color: #000000;
+}
+
+/* Заголовок страницы каталога */
+.heading--light {
+  background-color: #f2f6f8;
+}
+
+/* Фильтр товаров */
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form fieldset:not(:last-of-type) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters-form legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filters-form__slider {
+  background-color: #f7f3ec;
+}
+
+.filters-form__range {
+  background-color: #d7dcde;
+}
+
+.filters-form__track {
+  background-color: #00ca74;
+}
+
+.filters-form__price {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.filters-form__price input {
+  font: inherit;
+  font-size: 17px;
+  text-align: center;
+  color: #000000;
+  background-color: #f7f3ec;
+  border: none;
+}
+
+.filters-form__option {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filters-form__input:disabled + label {
+  opacity: 0.4;
+}
+
+/* Сортировка товаров */
+.sorting {
+  background-color: #f7f3ec;
+}
+
+.sorting__button {
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting__button:hover,
+.sorting__button:focus {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting__button:active,
+.sorting__button--active {
+  color: #ee3643;
+  border: none;
+}
+
+/* Пагинация */
+.pagination {
+  list-style: none;
+}
+
+.button-second--current,
+.button-second--current:hover,
+.button-second--current:focus,
+.button-second--current:active {
+  color: #ffffff;
+  background-color: #ee3643;
+  border-color: #ee3643;
+}
+
+/* Описание категории товара */
+.description {
+  background-color: #f2f6f8;
+}
+
 /* Подвал сайта */
 .footer {
   background-color: #32425c;
@@ -413,7 +604,7 @@ a {
 }
 
 .second-nav a {
-  color: #f1f5f7;
+  color: inherit;
 }
 
 .second-nav--alternate a {
