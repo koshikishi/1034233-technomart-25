@@ -658,7 +658,27 @@ a {
 
 /* Подвал сайта */
 .footer {
+  margin-top: 86px;
   background-color: #32425c;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column {
+  width: 330px;
+}
+
+/* Логотип сайта в подвале */
+.logo--footer {
+  display: block;
+  height: 68px;
+}
+
+.footer__logo {
+  margin-bottom: 29px;
 }
 
 /* Контактные данные в подвале */
@@ -668,9 +688,17 @@ a {
 }
 
 /* Дополнительная навигация по сайту */
+.footer__nav {
+  width: 560px;
+}
+
+.footer__second-nav {
+  margin-top: 39px;
+}
+
 .second-nav {
-  list-style: none;
   font: 18px/24px "Cuprum", "Arial", sans-serif;
+  text-align: right;
   color: #f1f5f7;
 }
 
@@ -694,14 +722,32 @@ a {
 
 /* Нижняя часть подвала */
 .footer__bottom {
+  margin-top: 52px;
+  padding-top: 37px;
+  padding-bottom: 35px;
   font: 16px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
 }
 
+.footer__bottom .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__copyright {
+  width: 240px;
+  margin: 0;
+  margin-right: 150px;
+}
+
 /* Социальные кнопки */
+.footer__social {
+  margin-right: 100px;
+}
+
 .social {
-  list-style: none;
+  width: 150px;
 }
 
 /* Стили ссылок нижней части подвала */
@@ -717,6 +763,17 @@ a {
 .footer__bottom a:active {
   color: #ee3643;
   text-decoration: none;
+}
+
+.footer__email {
+  width: 140px;
+  margin: 0;
+  margin-right: 50px;
+}
+
+.footer__dev {
+  width: 100px;
+  margin: 0;
 }
 
 /* Всплывающие окна */
