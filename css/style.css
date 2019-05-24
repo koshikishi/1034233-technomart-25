@@ -10,6 +10,15 @@ a {
   text-decoration: none;
 }
 
+/* Блок-центровщик */
+.container {
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 /* Стили для заголовков сайта */
 .title {
   font: 30px/30px "Cuprum", "Arial", sans-serif;
@@ -66,17 +75,27 @@ a {
 
 /* Шапка сайта */
 .header {
+  margin-bottom: 59px;
+  padding-bottom: 60px;
   background-color: #f2f6f8;
 }
 
 .header__top {
+  margin-bottom: 46px;
   font: 17px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
 }
 
+.header__top .container {
+  display: flex;
+}
+
 /* Логотип сайта */
 .logo {
+  width: 220px;
+  height: 47px;
+  margin-bottom: -5px;
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
 }
@@ -91,6 +110,10 @@ a {
 }
 
 /* Форма поиска */
+.header__search {
+  width: 270px;
+}
+
 .header__search input {
   font: inherit;
   color: inherit;
@@ -132,6 +155,7 @@ a {
 
 /* Ссылки для заказа */
 .header__button {
+  width: 150px;
   color: inherit;
   background-color: #293449;
 }
@@ -173,26 +197,45 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Средняя часть шапки */
+.header__middle {
+  display: flex;
+  align-items: flex-start;
+}
+
 /* Заголовок сайта */
 .header__title {
+  width: 200px;
+  margin: 0;
+  margin-right: 20px;
+  padding-top: 6px;
+  padding-right: 50px;
+  padding-left: 50px;
   font: italic 16px/23px "Cuprum", "Arial", sans-serif;
   color: #ee3643;
 }
 
 /* Контактные данные */
 .header__contacts {
+  width: 270px;
+  margin: 0;
+  margin-bottom: 44px;
+  margin-right: auto;
   font: 14px/24px "Cuprum", "Arial", sans-serif;
   color: #32425c;
 }
 
 .header__contacts b {
-  font: 21px/21px "Cuprum", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
   color: #ee3643;
   border: 3px solid #ffffff;
 }
 
 /* Пользовательская навигация */
 .user-nav {
+  width: 300px;
   font: 21px/21px "Cuprum", "Arial", sans-serif;
 }
 
@@ -218,7 +261,8 @@ a {
 }
 
 .user-nav__account {
-  font: 16px/18px "Cuprum", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
   color: #32425c;
 }
 
@@ -238,22 +282,20 @@ a {
 
 /* Основная навигация по сайту */
 .site-nav {
-  list-style: none;
+  min-height: 60px;
   font: 17px/17px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #32425c;
+  box-shadow: inset 0 -5px #293449;
 }
 
 .site-nav a {
   color: inherit;
-  background-color: #32425c;
-  box-shadow: inset 0 -5px #293449;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
   background-color: #293449;
-  box-shadow: none;
 }
 
 .site-nav a:active {
