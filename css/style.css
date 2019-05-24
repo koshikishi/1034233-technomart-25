@@ -96,10 +96,13 @@ a {
 }
 
 /* Логотип сайта */
+.header__logo {
+  margin-bottom: -5px;
+}
+
 .logo {
   width: 220px;
   height: 47px;
-  margin-bottom: -5px;
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
 }
@@ -519,13 +522,13 @@ a {
 .index-columns {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Блок о компании */
 .about {
   width: 540px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .about__list {
@@ -538,13 +541,10 @@ a {
 /* Блок контактов */
 .contacts {
   width: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 /* «Хлебные крошки» */
 .breadcrumbs {
-  list-style: none;
   line-height: 18px;
   text-transform: uppercase;
 }
