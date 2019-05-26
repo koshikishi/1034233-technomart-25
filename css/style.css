@@ -315,13 +315,35 @@ a {
   background-color: #1d2739;
 }
 
+/* Промо-блок */
+.promo {
+  margin-top: 20px;
+  margin-bottom: 53px;
+}
+
+.promo__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.promo__row--slider {
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  align-content: space-between;
+  height: 266px;
+}
+
 /* Карточки промо-блока */
 .promo-card {
+  width: 300px;
+  min-height: 123px;
   color: #ffffff;
   background-color: #c5c5c5;
 }
 
 .promo-card h3 {
+  margin: 0;
   font: bold 24px/30px "Cuprum", "Arial", sans-serif;
 }
 
@@ -360,6 +382,8 @@ a {
 
 /* Слайдер промо-блока */
 .slider {
+  width: 620px;
+  height: 266px;
   font: 18px/24px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
 }
