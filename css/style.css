@@ -475,7 +475,7 @@ a {
 }
 
 .product__price s {
-  color: #999999;
+  color: #a9a9a9;
   text-decoration: line-through;
 }
 
@@ -807,20 +807,37 @@ a {
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 52px;
 }
 
 .catalog__product {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
-.catalog__product:nth-child(3n) {
-  margin-right: 0;
+.catalog__product:nth-child(-n+3) {
+  margin-top: 0;
+}
+
+.catalog__product:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.catalog__product s {
+  color: #999999;
 }
 
 /* Пагинация */
+.main__pagination {
+  margin-top: 20px;
+}
+
 .pagination {
-  list-style: none;
+  display: flex;
+}
+
+.pagination__link + .pagination__link {
+  margin-left: 10px;
 }
 
 .button-second--current,
