@@ -558,9 +558,30 @@ a {
   opacity: 0.3;
 }
 
-/* Слайдер сервисов */
+/* Блок сервисов */
 .services {
+  margin-top: 20px;
+  margin-bottom: 77px;
+  padding-top: 63px;
   background-color: #f2f6f8;
+}
+
+/* Слайдер сервисов */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 330px;
+  margin: 0;
+}
+
+.tabs__control {
+  order: -1;
+  width: 240px;
+}
+
+.tabs__control:first-of-type {
+  margin-top: 46px;
 }
 
 .tabs__button {
@@ -583,6 +604,19 @@ a {
 .tabs__button--current {
   color: #32425c;
   background-color: #ffffff;
+}
+
+.tabs__item {
+  display: none;
+  width: 620px;
+  height: 288px;
+  margin: 0;
+  padding-top: 42px;
+  padding-left: 80px;
+}
+
+.tabs__item--current {
+  display: block;
 }
 
 .title--tabs {
