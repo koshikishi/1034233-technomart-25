@@ -410,6 +410,19 @@ a {
   text-transform: uppercase;
 }
 
+/* Блок популярных товаров */
+.popular {
+  margin-top: 20px;
+  margin-bottom: 21px;
+}
+
+.popular__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* Заголовок раздела на главной странице */
 .main__heading {
   margin-top: 20px;
