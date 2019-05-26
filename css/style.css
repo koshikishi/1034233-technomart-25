@@ -89,7 +89,6 @@ a {
 }
 
 .header__top {
-  margin-bottom: 46px;
   font: 17px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
@@ -213,6 +212,8 @@ a {
 .header__middle {
   display: flex;
   align-items: flex-start;
+  padding-top: 46px;
+  padding-bottom: 42px;
 }
 
 /* Заголовок сайта */
@@ -220,7 +221,6 @@ a {
   width: 200px;
   margin: 0;
   margin-right: 20px;
-  margin-bottom: 43px;
   padding-top: 6px;
   padding-right: 50px;
   padding-left: 50px;
@@ -720,6 +720,7 @@ a {
 .footer__top {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 52px;
 }
 
 .footer__column {
@@ -777,7 +778,6 @@ a {
 
 /* Нижняя часть подвала */
 .footer__bottom {
-  margin-top: 52px;
   padding-top: 37px;
   padding-bottom: 35px;
   font: 16px/18px "Cuprum", "Arial", sans-serif;
