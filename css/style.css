@@ -517,15 +517,36 @@ a {
   opacity: 0.3;
 }
 
-/* Карточки производителей */
+/* Блок популярных производителей */
+.brands {
+  margin-top: 20px;
+  margin-bottom: 85px;
+}
+
+.brands__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Карточка производителя */
 .brands__link {
+  width: 220px;
+  min-height: 145px;
   background-color: #ffffff;
-  border: 1px solid #eaeaea;
+  outline: 1px solid #eaeaea;
+}
+
+.brands__link:nth-child(n+5) {
+  margin-top: 20px;
 }
 
 .brands__link:hover,
 .brands__link:focus {
-  border-color: #ffffff;
+  outline: none;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
