@@ -491,7 +491,7 @@ a {
 }
 
 .product__price s {
-  color: #a9a9a9;
+  color: #999999;
   text-decoration: line-through;
 }
 
@@ -839,10 +839,6 @@ a {
 
 .catalog__product:nth-child(3n+1) {
   margin-left: 0;
-}
-
-.catalog__product s {
-  color: #999999;
 }
 
 /* Пагинация */
