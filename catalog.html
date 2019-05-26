@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="inner-page">
-    <header class="header">
+  <body class="page inner-page">
+    <header class="header page__header">
       <div class="header__top">
         <div class="container">
           <a class="logo header__logo" href="index.html">
@@ -53,22 +53,22 @@
 
     <main class="main">
       <div class="container">
-        <div class="breadcrumbs main__breadcrumbs">
+        <div class="breadcrumbs page__breadcrumbs">
           <a class="breadcrumbs__link breadcrumbs__link--home" href="index.html">Главная</a>
           <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
           <a class="breadcrumbs__link" href="#">Инструмент</a>
           <a class="breadcrumbs__link">Перфораторы</a>
         </div>
 
-        <div class="heading main__heading heading--light">
+        <div class="heading page__heading heading--light">
           <h1 class="title title--heading">Перфораторы</h1>
         </div>
 
-        <div class="catalog-columns">
+        <div class="columns">
           <section class="filters">
-            <h2 class="title-small">Фильтр:</h2>
+            <h2 class="title-small filters__title">Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Цена:</legend>
                 <div class="filters-form__slider">
                   <div class="filters-form__range">
@@ -83,7 +83,7 @@
                   <input type="number" name="max-price" value="30000" aria-label="Максимальная цена">
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Производители:</legend>
                 <div class="filters-form__option">
                   <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-bosch" type="checkbox" name="bosch" checked>
@@ -106,7 +106,7 @@
                   <label for="filter-hitachi">Hitachi</label>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Питание:</legend>
                 <div class="filters-form__option">
                   <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-battery" type="radio" name="power" value="battery" checked>
@@ -121,9 +121,9 @@
             </form>
           </section>
 
-          <div class="catalog-columns__column">
-            <section class="sorting">
-              <h2 class="title-small">Сортировка:</h2>
+          <div class="column">
+            <section class="sorting page__sorting">
+              <h2 class="title-small sorting__title">Сортировка:</h2>
               <div class="sorting__type">
                 <a class="sorting__button sorting__button--active" href="#">По цене</a>
                 <a class="sorting__button" href="#">По типу</a>
@@ -135,7 +135,7 @@
               </div>
             </section>
 
-            <section class="catalog">
+            <section class="catalog page__catalog">
               <h2 class="visually-hidden">Каталог перфораторов</h2>
               <div class="catalog__list">
                 <article class="product catalog__product">
@@ -289,27 +289,29 @@
                   </p>
                 </article>
               </div>
-              <ul class="pagination" aria-label="Список страниц раздела">
-                <li><a class="button-second button-second--current pagination__link" aria-label="Мы на первой странице">1</a></li>
-                <li><a class="button-second pagination__link" href="#" aria-label="На вторую страницу">2</a></li>
-                <li><a class="button-second pagination__link" href="#" aria-label="На третью страницу">3</a></li>
-                <li><a class="button-second pagination__link" href="#" aria-label="На следующую страницу">Следующая</a></li>
-              </ul>
+              <div class="pagination page__pagination" aria-label="Список страниц раздела">
+                <a class="button-second button-second--current pagination__link" aria-label="Мы на первой странице">1</a>
+                <a class="button-second pagination__link" href="#" aria-label="На вторую страницу">2</a>
+                <a class="button-second pagination__link" href="#" aria-label="На третью страницу">3</a>
+                <a class="button-second pagination__link" href="#" aria-label="На следующую страницу">Следующая</a>
+              </div>
             </section>
           </div>
         </div>
       </div>
 
-      <section class="description">
-        <h2 class="title">Пара слов о перфораторах</h2>
-        <p>
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-        </p>
+      <section class="description page__description">
+        <div class="container">
+          <h2 class="title">Пара слов о перфораторах</h2>
+          <p>
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer page__footer">
       <div class="footer__top container">
         <div class="footer__column">
           <a class="logo logo--footer footer__logo" href="index.html">

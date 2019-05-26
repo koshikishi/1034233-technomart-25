@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="header">
+  <body class="page">
+    <header class="header page__header">
       <div class="header__top">
         <div class="container">
           <a class="logo header__logo">
@@ -48,51 +48,55 @@
     </header>
 
     <main class="main">
-      <section class="promo">
+      <section class="promo page__promo container">
         <h2 class="visually-hidden">Избранное</h2>
-        <section class="promo-card promo-card--material promo-card--new">
-          <h3>Материалы</h3>
-          <a class="button button--promo promo-card__button" href="#">На любой вкус</a>
-        </section>
-        <section class="promo-card promo-card--tools">
-          <h3>Инструмент</h3>
-          <a class="button button--promo promo-card__button" href="#">На все случаи</a>
-        </section>
-        <section class="promo-card promo-card--tech">
-          <h3>Техника</h3>
-          <a class="button button--promo promo-card__button" href="#">Для стройки</a>
-        </section>
-        <section class="promo-card promo-card--sale">
-          <h3>Скидки 50%</h3>
-          <a class="button button--promo promo-card__button" href="offers.html">На 350 товаров</a>
-        </section>
-        <section class="promo-card promo-card--delivery">
-          <h3>Доставка</h3>
-          <a class="button button--promo promo-card__button" href="delivery.html">Бесплатно</a>
-        </section>
-        <section class="slider">
-          <input class="slider__radio visually-hidden" id="slider-1" type="radio" name="slider">
-          <input class="slider__radio visually-hidden" id="slider-2" type="radio" name="slider" checked>
-          <div class="slider__control">
-            <label for="slider-1">Первый слайд «Перфораторы»</label>
-            <label for="slider-2">Второй слайд «Дрели»</label>
-          </div>
-          <div class="slider__inner">
-            <div class="slider__item slider__item--perforator">
-              <h3 class="slider__title">Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <a class="button slider__button" href="catalog.html">Открыть каталог</a>
+        <div class="promo__row">
+          <section class="promo-card promo-card--material promo-card--new">
+            <h3>Материалы</h3>
+            <a class="button button--promo promo-card__button" href="#">На любой вкус</a>
+          </section>
+          <section class="promo-card promo-card--tools">
+            <h3>Инструмент</h3>
+            <a class="button button--promo promo-card__button" href="#">На все случаи</a>
+          </section>
+          <section class="promo-card promo-card--tech">
+            <h3>Техника</h3>
+            <a class="button button--promo promo-card__button" href="#">Для стройки</a>
+          </section>
+        </div>
+        <div class="promo__row promo__row--slider">
+          <section class="promo-card promo-card--sale">
+            <h3>Скидки 50%</h3>
+            <a class="button button--promo promo-card__button" href="offers.html">На 350 товаров</a>
+          </section>
+          <section class="promo-card promo-card--delivery">
+            <h3>Доставка</h3>
+            <a class="button button--promo promo-card__button" href="delivery.html">Бесплатно</a>
+          </section>
+          <section class="slider">
+            <input class="slider__radio visually-hidden" id="slider-1" type="radio" name="slider">
+            <input class="slider__radio visually-hidden" id="slider-2" type="radio" name="slider" checked>
+            <div class="slider__control">
+              <label for="slider-1">Первый слайд «Перфораторы»</label>
+              <label for="slider-2">Второй слайд «Дрели»</label>
             </div>
-            <div class="slider__item slider__item--drill">
-              <h3 class="slider__title">Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a class="button slider__button" href="catalog.html">Открыть каталог</a>
+            <div class="slider__inner">
+              <div class="slider__item slider__item--perforator">
+                <h3 class="slider__title">Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a class="button slider__button" href="catalog.html">Открыть каталог</a>
+              </div>
+              <div class="slider__item slider__item--drill">
+                <h3 class="slider__title">Дрели</h3>
+                <p>Соседям на радость!</p>
+                <a class="button slider__button" href="catalog.html">Открыть каталог</a>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </section>
 
-      <section class="popular">
+      <section class="popular page__popular container">
         <div class="heading">
           <h2 class="title title--heading">Популярные товары:</h2>
           <a class="button heading__button" href="#">Все популярные товары</a>
@@ -168,7 +172,7 @@
         </div>
       </section>
 
-      <section class="brands">
+      <section class="brands page__brands container">
         <div class="heading">
           <h2 class="title title--heading">Популярные производители:</h2>
           <a class="button heading__button" href="#">Все производители</a>
@@ -201,47 +205,49 @@
         </div>
       </section>
 
-      <section class="services">
-        <h2 class="title">Сервисы</h2>
-        <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <dl class="tabs services__tabs">
-          <dt class="tabs__control">
-            <button class="tabs__button tabs__button--current" type="button">Доставка</button>
-          </dt>
-          <dd class="tabs__item tabs__item--delivery tabs__item--current">
-            <h3 class="title title--tabs">Доставка</h3>
-            <p>
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-            </p>
-          </dd>
-          <dt class="tabs__control">
-            <button class="tabs__button" type="button">Гарантия</button>
-          </dt>
-          <dd class="tabs__item tabs__item--warranty">
-            <h3 class="title title--tabs">Гарантия</h3>
-            <p>
-              Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-            </p>
-          </dd>
-          <dt class="tabs__control">
-            <button class="tabs__button" type="button">Кредит</button>
-          </dt>
-          <dd class="tabs__item tabs__item--credit">
-            <h3 class="title title--tabs">Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще!<br>
-              Кредитные консультанты придут вам на помощь.
-            </p>
-            <a class="button" href="#">Отправить заявку</a>
-          </dd>
-        </dl>
+      <section class="services page__services">
+        <div class="container">
+          <h2 class="title">Сервисы</h2>
+          <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <dl class="tabs services__tabs">
+            <dt class="tabs__control">
+              <button class="tabs__button tabs__button--current" type="button">Доставка</button>
+            </dt>
+            <dd class="tabs__item tabs__item--delivery tabs__item--current">
+              <h3 class="title title--tabs">Доставка</h3>
+              <p>
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+            </dd>
+            <dt class="tabs__control">
+              <button class="tabs__button" type="button">Гарантия</button>
+            </dt>
+            <dd class="tabs__item tabs__item--warranty">
+              <h3 class="title title--tabs">Гарантия</h3>
+              <p>
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </dd>
+            <dt class="tabs__control">
+              <button class="tabs__button" type="button">Кредит</button>
+            </dt>
+            <dd class="tabs__item tabs__item--credit">
+              <h3 class="title title--tabs">Кредит</h3>
+              <p>
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="button" href="#">Отправить заявку</a>
+            </dd>
+          </dl>
+        </div>
       </section>
 
-      <div class="container index-columns">
+      <div class="container columns">
         <section class="about">
           <h2 class="title">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
@@ -268,7 +274,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer page__footer">
       <div class="footer__top container">
         <div class="footer__column">
           <a class="logo logo--footer footer__logo">
