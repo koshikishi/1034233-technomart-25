@@ -77,14 +77,17 @@ a {
 }
 
 /* Шапка сайта */
-.header {
+.page__header {
   margin-bottom: 59px;
-  padding-bottom: 60px;
-  background-color: #f2f6f8;
 }
 
-.inner-page .header {
+.inner-page .page__header {
   margin-bottom: 23px;
+}
+
+.header {
+  padding-bottom: 60px;
+  background-color: #f2f6f8;
 }
 
 .header__top {
@@ -315,7 +318,7 @@ a {
 }
 
 /* Промо-блок */
-.promo {
+.page__promo {
   margin-top: 20px;
   margin-bottom: 53px;
 }
@@ -410,7 +413,7 @@ a {
 }
 
 /* Блок популярных товаров */
-.popular {
+.page__popular {
   margin-top: 20px;
   margin-bottom: 21px;
 }
@@ -423,7 +426,7 @@ a {
 }
 
 /* Заголовок раздела на главной странице */
-.main__heading {
+.page__heading {
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -517,7 +520,7 @@ a {
 }
 
 /* Блок популярных производителей */
-.brands {
+.page__brands {
   margin-top: 20px;
   margin-bottom: 85px;
 }
@@ -558,9 +561,12 @@ a {
 }
 
 /* Блок сервисов */
-.services {
+.page__services {
   margin-top: 20px;
   margin-bottom: 77px;
+}
+
+.services {
   padding-top: 63px;
   background-color: #f2f6f8;
 }
@@ -625,7 +631,7 @@ a {
 }
 
 /* Блок колонок */
-.index-columns {
+.columns {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -650,7 +656,7 @@ a {
 }
 
 /* «Хлебные крошки» */
-.main__breadcrumbs {
+.page__breadcrumbs {
   margin-top: 20px;
   margin-bottom: 24px;
 }
@@ -667,18 +673,6 @@ a {
 /* Заголовок страницы каталога */
 .heading--light {
   background-color: #f2f6f8;
-}
-
-/* Блок колонок */
-.catalog-columns {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
-
-.catalog-columns__column {
-  width: 700px;
 }
 
 /* Фильтр товаров */
@@ -751,10 +745,18 @@ a {
   opacity: 0.4;
 }
 
+/* Колонка */
+.column {
+  width: 700px;
+}
+
 /* Сортировка товаров */
+.page__sorting {
+  margin-bottom: 20px;
+}
+
 .sorting {
   display: flex;
-  margin-bottom: 20px;
   padding-top: 11px;
   padding-right: 17px;
   padding-bottom: 11px;
@@ -800,7 +802,7 @@ a {
 }
 
 /* Каталог товаров */
-.catalog {
+.page__catalog {
   margin-top: 20px;
 }
 
@@ -828,7 +830,7 @@ a {
 }
 
 /* Пагинация */
-.main__pagination {
+.page__pagination {
   margin-top: 20px;
 }
 
@@ -850,21 +852,27 @@ a {
 }
 
 /* Описание категории товара */
-.description {
+.page__description {
   margin-top: 20px;
+}
+
+.description {
   padding-top: 63px;
   padding-bottom: 73px;
   background-color: #f2f6f8;
 }
 
 /* Подвал сайта */
-.footer {
+.page__footer {
   margin-top: 86px;
-  background-color: #32425c;
 }
 
-.inner-page .footer {
+.inner-page .page__footer {
   margin-top: 0;
+}
+
+.footer {
+  background-color: #32425c;
 }
 
 .footer__top {
