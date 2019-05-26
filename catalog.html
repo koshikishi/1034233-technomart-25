@@ -66,9 +66,9 @@
 
         <div class="catalog-columns">
           <section class="filters">
-            <h2 class="title-small">Фильтр:</h2>
+            <h2 class="title-small filters__title">Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Цена:</legend>
                 <div class="filters-form__slider">
                   <div class="filters-form__range">
@@ -83,7 +83,7 @@
                   <input type="number" name="max-price" value="30000" aria-label="Максимальная цена">
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Производители:</legend>
                 <div class="filters-form__option">
                   <input class="filters-form__input filters-form__input--checkbox visually-hidden" id="filter-bosch" type="checkbox" name="bosch" checked>
@@ -106,7 +106,7 @@
                   <label for="filter-hitachi">Hitachi</label>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filters-form__part">
                 <legend>Питание:</legend>
                 <div class="filters-form__option">
                   <input class="filters-form__input filters-form__input--radio visually-hidden" id="filter-battery" type="radio" name="power" value="battery" checked>
@@ -123,7 +123,7 @@
 
           <div class="catalog-columns__column">
             <section class="sorting">
-              <h2 class="title-small">Сортировка:</h2>
+              <h2 class="title-small sorting__title">Сортировка:</h2>
               <div class="sorting__type">
                 <a class="sorting__button sorting__button--active" href="#">По цене</a>
                 <a class="sorting__button" href="#">По типу</a>
