@@ -851,6 +851,9 @@ a {
 
 /* Описание категории товара */
 .description {
+  margin-top: 20px;
+  padding-top: 63px;
+  padding-bottom: 73px;
   background-color: #f2f6f8;
 }
 
@@ -858,6 +861,10 @@ a {
 .footer {
   margin-top: 86px;
   background-color: #32425c;
+}
+
+.inner-page .footer {
+  margin-top: 0;
 }
 
 .footer__top {
