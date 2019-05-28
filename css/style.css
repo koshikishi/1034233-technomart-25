@@ -97,6 +97,7 @@ img {
 }
 
 .header__top {
+  min-height: 42px;
   font: 17px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
@@ -112,8 +113,11 @@ img {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 220px;
-  height: 47px;
+  min-height: 47px;
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
 }
@@ -129,54 +133,81 @@ img {
 
 /* Форма поиска */
 .header__search {
+  display: flex;
+  flex-direction: row-reverse;
   width: 270px;
 }
 
-.header__search input {
+.header__search-field {
+  flex-grow: 1;
+  padding: 0;
+  padding-right: 10px;
+  padding-left: 1px;
   font: inherit;
   color: inherit;
-  background-color: #293449;
+  background-color: transparent;
   border: none;
 }
 
-.header__search input::placeholder {
+.header__search-field::placeholder {
   color: inherit;
   opacity: 1;
 }
 
-.header__search input:hover {
+.header__search-field:hover {
   background-color: #212a3a;
 }
 
-.header__search input:focus {
+.header__search-field:focus {
   color: #000000;
   background-color: #ffffff;
 }
 
-.header__search input:focus::placeholder {
+.header__search-field:focus::placeholder {
   opacity: 0.4;
 }
 
-.header__search button {
-  background-color: #293449;
+.header__search-button {
+  width: 48px;
+  padding: 0;
+  padding-top: 3px;
+  padding-left: 3px;
+  background-color: transparent;
   border: none;
   cursor: pointer;
+  opacity: 0.3;
 }
 
-.header__search button:hover,
-.header__search button:focus {
+.header__search-button:hover,
+.header__search-button:focus {
   background-color: #212a3a;
+  opacity: 1;
 }
 
-.header__search input:focus + button {
+.header__search-button:active,
+.header__search-field:focus + .header__search-button {
   background-color: #ffffff;
+  opacity: 1;
+}
+
+.header__search-button:active path,
+.header__search-field:focus + .header__search-button path {
+  fill: #ee3643;
 }
 
 /* Ссылки для заказа */
+.header__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+}
+
 .header__button {
-  width: 150px;
+  position: relative;
+  width: 130px;
+  padding: 12px 10px;
+  text-align: center;
   color: inherit;
-  background-color: #293449;
 }
 
 .header__button:hover,
@@ -187,6 +218,45 @@ img {
 .header__button:active {
   background-color: #161d29;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.header__button--bookmarks,
+.header__button--cart {
+  width: 93px;
+  padding-left: 47px;
+  text-align: left;
+}
+
+.header__button--bookmarks::before,
+.header__button--cart::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  width: 15px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header__button--bookmarks::before {
+  background-image: url("../img/icon-bookmarks.svg");
+}
+
+.header__button--cart::before {
+  background-image: url("../img/icon-cart.svg");
+}
+
+.header__button--bookmarks:hover::before,
+.header__button--bookmarks:focus::before,
+.header__button--cart:hover::before,
+.header__button--cart:focus::before {
+  opacity: 1;
+}
+
+.header__button--bookmarks:active::before,
+.header__button--cart:active::before {
+  opacity: 0.5;
 }
 
 .header__button--full {
@@ -219,9 +289,8 @@ img {
 /* Средняя часть шапки */
 .header__middle {
   display: flex;
-  align-items: flex-start;
   padding-top: 46px;
-  padding-bottom: 42px;
+  padding-bottom: 39px;
 }
 
 /* Заголовок сайта */
@@ -229,9 +298,9 @@ img {
   width: 200px;
   margin: 0;
   margin-right: 20px;
-  padding-top: 6px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-top: 3px;
+  padding-right: 47px;
+  padding-left: 53px;
   font: italic 16px/23px "Cuprum", "Arial", sans-serif;
   color: #ee3643;
 }
@@ -242,14 +311,20 @@ img {
   margin: 0;
   margin-right: auto;
   font: 14px/24px "Cuprum", "Arial", sans-serif;
+  text-align: center;
   color: #32425c;
 }
 
 .header__contacts b {
+  display: block;
+  margin-bottom: 2px;
+  padding: 10px;
+  padding-left: 32px;
   font-weight: normal;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
+  background: url("../img/icon-phone.svg") 12px 10px no-repeat;
   border: 3px solid #ffffff;
 }
 
@@ -259,7 +334,16 @@ img {
   font: 21px/21px "Cuprum", "Arial", sans-serif;
 }
 
+.user-nav__login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 7px;
+}
+
 .user-nav__button {
+  position: relative;
+  padding: 12px 24px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -267,6 +351,38 @@ img {
 .user-nav__button:hover,
 .user-nav__button:focus {
   color: #ee3643;
+}
+
+.user-nav__button svg {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.user-nav__button:hover path,
+.user-nav__button:focus path {
+  fill: #32425c;
+}
+
+.user-nav__button:active path {
+  fill: #c5c5c5;
+}
+
+.user-nav__button--login {
+  margin-right: 10px;
+  padding-left: 49px;
+}
+
+.user-nav__button--profile {
+  flex-grow: 1;
+  padding-right: 0;
+  padding-left: 48px;
+}
+
+.user-nav__button--logout {
+  width: 21px;
+  padding-right: 10px;
+  padding-left: 14px;
 }
 
 .user-nav__button--profile:hover,
@@ -281,6 +397,8 @@ img {
 }
 
 .user-nav__account {
+  padding-right: 18px;
+  padding-left: 18px;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -300,8 +418,27 @@ img {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.user-nav__account a + a {
+  position: relative;
+  margin-left: 29px;
+}
+
+.user-nav__account a + a::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -17px;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
+}
+
 /* Основная навигация по сайту */
 .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   min-height: 60px;
   font: 17px/17px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
@@ -310,6 +447,8 @@ img {
 }
 
 .site-nav a {
+  padding: 20px 31px;
+  text-align: center;
   color: inherit;
 }
 
