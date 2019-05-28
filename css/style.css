@@ -118,7 +118,8 @@ img {
   justify-content: center;
   align-items: center;
   width: 220px;
-  min-height: 47px;
+  min-height: 43px;
+  padding-bottom: 4px;
   background-color: #ee3643;
   box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
 }
@@ -1064,7 +1065,7 @@ img {
 .footer__top {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 52px;
+  padding-bottom: 49px;
 }
 
 .footer__column {
@@ -1072,17 +1073,17 @@ img {
 }
 
 /* Логотип сайта в подвале */
-.logo--footer {
-  display: block;
-  height: 68px;
+.footer__logo {
+  margin-bottom: 28px;
 }
 
-.footer__logo {
-  margin-bottom: 29px;
+.logo--footer {
+  height: 64px;
 }
 
 /* Контактные данные в подвале */
 .footer__contacts {
+  padding-left: 3px;
   font: normal 18px/24px "Cuprum", "Arial", sans-serif;
   color: #f3f7f9;
 }
@@ -1093,7 +1094,7 @@ img {
 }
 
 .footer__second-nav {
-  margin-top: 39px;
+  margin-top: 37px;
 }
 
 .second-nav {
@@ -1104,6 +1105,10 @@ img {
 
 .second-nav a {
   color: inherit;
+}
+
+.second-nav a + a {
+  margin-left: 55px;
 }
 
 .second-nav--alternate a {
@@ -1142,11 +1147,41 @@ img {
 
 /* Социальные кнопки */
 .footer__social {
-  margin-right: 100px;
+  margin-right: 117px;
 }
 
 .social {
-  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 133px;
+}
+
+.social__button {
+  width: 41px;
+  height: 41px;
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.social__button:hover,
+.social__button:focus,
+.social__button:active {
+  background-color: #ee3643;
+}
+
+.social__button--vk {
+  background-image: url("../img/social-icon-vk.svg");
+}
+
+.social__button--fb {
+  background-image: url("../img/social-icon-fb.svg");
+}
+
+.social__button--in {
+  background-image: url("../img/social-icon-insta.svg");
 }
 
 /* Стили ссылок нижней части подвала */
