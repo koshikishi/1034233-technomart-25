@@ -1,5 +1,6 @@
 /* Базовые стили для всего сайта */
-body {
+.page {
+  min-width: 960px;
   margin: 0;
   font: 13px/24px "PT Sans", "Arial", sans-serif;
   color: #000000;
@@ -8,6 +9,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Блок-центровщик */
@@ -86,7 +92,6 @@ a {
 }
 
 .header {
-  min-width: 960px;
   padding-bottom: 60px;
   background-color: #f2f6f8;
 }
@@ -324,10 +329,6 @@ a {
   margin-bottom: 53px;
 }
 
-.promo {
-  min-width: 940px;
-}
-
 .promo__row {
   display: flex;
   justify-content: space-between;
@@ -421,10 +422,6 @@ a {
 .page__popular {
   margin-top: 20px;
   margin-bottom: 1px;
-}
-
-.popular {
-  min-width: 940px;
 }
 
 .popular__list {
@@ -537,10 +534,6 @@ a {
   margin-bottom: 65px;
 }
 
-.brands {
-  min-width: 940px;
-}
-
 .brands__list {
   display: flex;
   flex-wrap: wrap;
@@ -579,7 +572,6 @@ a {
 }
 
 .services {
-  min-width: 960px;
   padding-top: 63px;
   background-color: #f2f6f8;
 }
@@ -647,7 +639,6 @@ a {
 .columns {
   display: flex;
   justify-content: space-between;
-  min-width: 940px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -870,7 +861,6 @@ a {
 }
 
 .description {
-  min-width: 960px;
   padding-top: 63px;
   padding-bottom: 73px;
   background-color: #f2f6f8;
@@ -886,7 +876,6 @@ a {
 }
 
 .footer {
-  min-width: 960px;
   background-color: #32425c;
 }
 
