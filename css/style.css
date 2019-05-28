@@ -1212,7 +1212,126 @@ img {
 
 /* Всплывающие окна */
 .modal {
+  position: relative;
+  background-color: #ffffff;
+  border-top: 7px solid #ff5257;
+}
+
+.modal__buttons {
+  padding: 37px 80px;
+  background-color: #f4f4f4;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39px;
+  height: 39px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__close::before,
+.modal__close::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 6px;
+  width: 27px;
+  height: 4px;
+  background-color: #ee3643;
+}
+
+.modal__close::before {
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  transform: rotate(-45deg);
+}
+
+.hidden {
   display: none;
+}
+
+/* Всплывающее окно обратной связи */
+.modal--contacts {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  min-height: 423px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  transform: translate(-50%, -50%);
+}
+
+.contacts-form__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 47px 80px 29px;
+}
+
+.contacts-form__item {
+  width: 220px;
+}
+
+.contacts-form__item--wide {
+  width: 100%;
+}
+
+.contacts-form__item label {
+  display: block;
+  margin-bottom: 9px;
+  font: 18px/18px "Cuprum", "Arial", sans-serif;
+}
+
+.contacts-form__item input,
+.contacts-form__item textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 14px;
+  font: inherit;
+  line-height: 18px;
+  background-color: transparent;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.contacts-form__item input {
+  margin-bottom: 21px;
+}
+
+.contacts-form__item textarea {
+  height: 114px;
+}
+
+.contacts-form__item input::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+
+.contacts-form__item textarea::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+
+.contacts-form__item input:hover,
+.contacts-form__item textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.contacts-form__item input:focus,
+.contacts-form__item textarea:focus {
+  border-color: #ee3643;
+}
+
+.modal--contacts .button {
+  display: block;
+  width: 100%;
 }
 
 /* Доступное скрытие элемента */

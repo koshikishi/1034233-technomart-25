@@ -345,32 +345,38 @@
       </div>
     </footer>
 
-    <section class="modal modal--contacts">
+    <section class="modal modal--contacts hidden">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="contacts-form__item">
-          <label for="contacts-name">Ваше имя:</label>
-          <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
-        </div>
-        <div class="contacts-form__item">
-          <label for="contacts-email">Ваш e-mail:</label>
-          <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
-        </div>
-        <div class="contacts-form__item">
-          <label for="contacts-message">Текст письма:</label>
-          <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+        <div class="contacts-form__inner">
+          <div class="contacts-form__item">
+            <label for="contacts-name">Ваше имя:</label>
+            <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="contacts-form__item">
+            <label for="contacts-email">Ваш e-mail:</label>
+            <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
+          </div>
+          <div class="contacts-form__item contacts-form__item--wide">
+            <label for="contacts-message">Текст письма:</label>
+            <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+          </div>
         </div>
         <div class="modal__buttons">
           <button class="button" type="submit">Отправить</button>
         </div>
       </form>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
-    <section class="modal modal--map">
+    <section class="modal modal--map hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6509465573246!2d30.322500229274443!3d59.93871649886725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1558345574596!5m2!1sru!2sru" width="940" height="446" aria-label="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" allowfullscreen></iframe>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
