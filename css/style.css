@@ -1334,6 +1334,23 @@ img {
   width: 100%;
 }
 
+/* Всплывающее окно с картой */
+.modal--map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 940px;
+  height: 446px;
+  background: #ebf0f0 url("../img/map-large.png") 0 0 no-repeat;
+  border: none;
+  box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
+  transform: translate(-50%, -50%);
+}
+
+.modal--map iframe {
+  border: none;
+}
+
 /* Доступное скрытие элемента */
 .visually-hidden {
   position: absolute;
