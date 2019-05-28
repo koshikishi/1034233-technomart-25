@@ -1228,8 +1228,10 @@ img {
 }
 
 .second-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   font: 18px/24px "Cuprum", "Arial", sans-serif;
-  text-align: right;
   color: #f1f5f7;
 }
 
@@ -1238,7 +1240,7 @@ img {
 }
 
 .second-nav a + a {
-  margin-left: 55px;
+  margin-left: 59px;
 }
 
 .second-nav--alternate a {
