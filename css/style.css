@@ -89,7 +89,7 @@ img {
 }
 
 .inner-page .page__header {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .header {
@@ -581,8 +581,7 @@ img {
 .heading {
   display: flex;
   justify-content: space-between;
-  padding: 28px;
-  padding-right: 24px;
+  padding: 30px 24px 29px 28px;
   background-color: #f9f5f0;
 }
 
@@ -846,16 +845,46 @@ img {
 /* «Хлебные крошки» */
 .page__breadcrumbs {
   margin-top: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.breadcrumbs__link {
+.breadcrumbs__item + .breadcrumbs__item {
+  position: relative;
+  margin-left: 40px;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -28px;
+  width: 8px;
+  height: 8px;
+  border: 0 solid #c1c6ce;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs__item a {
   color: #000000;
+}
+
+.breadcrumbs__item--home a {
+  display: inline-block;
+  width: 15px;
+  height: 100%;
+  min-height: 12px;
+  background: url("../img/icon-home.svg") -1px 2px no-repeat;
 }
 
 /* Заголовок страницы каталога */
