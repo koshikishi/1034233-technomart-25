@@ -893,16 +893,19 @@ img {
 
 /* Карточка производителя */
 .brands__link {
-  width: 220px;
-  min-height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  min-height: 143px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  outline: 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
 }
 
 .brands__link:hover,
 .brands__link:focus {
-  outline: none;
+  border-color: transparent;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -912,6 +915,22 @@ img {
 
 .brands__link:active img {
   opacity: 0.3;
+}
+
+.brands__link img[src*="makita"] {
+  margin-top: -5px;
+}
+
+.brands__link img[src*="dewalt"] {
+  margin-top: -5px;
+}
+
+.brands__link img[src*="interskol"] {
+  margin-top: -15px;
+}
+
+.brands__link img[src*="metabo"] {
+  margin-top: -8px;
 }
 
 /* Блок сервисов */
