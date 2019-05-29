@@ -12,15 +12,22 @@
       <div class="header__top">
         <div class="container">
           <a class="logo header__logo" href="index.html">
-            <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="109" height="19">
+            <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="108" height="18">
           </a>
           <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
-            <button type="submit">Искать</button>
+            <input class="header__search-field" type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
+            <button class="header__search-button" type="submit">
+              <svg width="17" height="17">
+                <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" fill="#ffffff"></path>
+              </svg>
+              <span class="visually-hidden">Искать</span>
+            </button>
           </form>
-          <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
-          <a class="header__button header__button--cart header__button--full" href="cart.html">Корзина: 10</a>
-          <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+          <div class="header__buttons">
+            <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
+            <a class="header__button header__button--cart header__button--full" href="cart.html">Корзина: 10</a>
+            <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="container">
@@ -31,12 +38,25 @@
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
           <div class="user-nav">
-            <a class="user-nav__button user-nav__button--profile" href="profile.html">Равшан Джамшутович</a>
-            <a class="user-nav__button user-nav__button--logout" href="logout.html">Выйти</a>
-            <div class="user-nav__account">
-              <a href="#">Мои заказы</a>
-              <a href="#">Личный кабинет</a>
+            <div class="user-nav__login">
+              <a class="user-nav__button user-nav__button--profile" href="profile.html">
+                <svg width="20" height="18">
+                  <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" fill="#c5c5c5"></path>
+                </svg>
+                Равшан Джамшутович
+              </a>
+              <a class="user-nav__button user-nav__button--logout" href="logout.html">
+                <svg width="21" height="17">
+                  <path d="M21 8.5L12.125 0v6h-6v5h6v6z" fill="#c5c5c5"></path>
+                  <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" fill="#c5c5c5"></path>
+                </svg>
+                <span class="visually-hidden">Выйти</span>
+              </a>
             </div>
+            <ul class="user-nav__account">
+              <li><a href="#">Мои заказы</a></li>
+              <li><a href="#">Личный кабинет</a></li>
+            </ul>
           </div>
         </div>
         <nav class="site-nav header__nav">
@@ -53,12 +73,22 @@
 
     <main class="main">
       <div class="container">
-        <div class="breadcrumbs page__breadcrumbs">
-          <a class="breadcrumbs__link breadcrumbs__link--home" href="index.html">Главная</a>
-          <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
-          <a class="breadcrumbs__link" href="#">Инструмент</a>
-          <a class="breadcrumbs__link">Перфораторы</a>
-        </div>
+        <ul class="breadcrumbs page__breadcrumbs">
+          <li class="breadcrumbs__item breadcrumbs__item--home">
+            <a href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Инструмент</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a>Перфораторы</a>
+          </li>
+        </ul>
 
         <div class="heading page__heading heading--light">
           <h1 class="title title--heading">Перфораторы</h1>
@@ -117,7 +147,7 @@
                   <label for="filter-mains-supply">Сетевые</label>
                 </div>
               </fieldset>
-              <button class="button-second" type="submit">Показать</button>
+              <button class="button-second button-second--wide" type="submit">Показать</button>
             </form>
           </section>
 
@@ -293,7 +323,7 @@
                 <a class="button-second button-second--current pagination__link" aria-label="Мы на первой странице">1</a>
                 <a class="button-second pagination__link" href="#" aria-label="На вторую страницу">2</a>
                 <a class="button-second pagination__link" href="#" aria-label="На третью страницу">3</a>
-                <a class="button-second pagination__link" href="#" aria-label="На следующую страницу">Следующая</a>
+                <a class="button-second pagination__link button-second--wide" href="#" aria-label="На следующую страницу">Следующая</a>
               </div>
             </section>
           </div>
@@ -315,10 +345,10 @@
       <div class="footer__top container">
         <div class="footer__column">
           <a class="logo logo--footer footer__logo" href="index.html">
-            <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="138" height="23">
+            <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="137" height="22">
           </a>
           <address class="footer__contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             +7 (812) 555-05-55
           </address>
         </div>
@@ -345,9 +375,15 @@
             Все права защищены
           </p>
           <div class="social footer__social">
-            <a class="social__button social__button--vk" href="#">Компания «Техномарт» во ВКонтакте</a>
-            <a class="social__button social__button--fb" href="#">Компания «Техномарт» на Фейсбуке</a>
-            <a class="social__button social__button--in" href="#">Компания «Техномарт» в Инстаграме</a>
+            <a class="social__button social__button--vk" href="#">
+              <span class="visually-hidden">Компания «Техномарт» во ВКонтакте</span>
+            </a>
+            <a class="social__button social__button--fb" href="#">
+              <span class="visually-hidden">Компания «Техномарт» на Фейсбуке</span>
+            </a>
+            <a class="social__button social__button--in" href="#">
+              <span class="visually-hidden">Компания «Техномарт» в Инстаграме</span>
+            </a>
           </div>
           <p class="footer__email">
             Обратная связь:
@@ -361,14 +397,18 @@
       </div>
     </footer>
 
-    <section class="modal modal--cart">
-      <h2 class="visually-hidden">Добавление товара в корзину</h2>
-      <b>Товар добавлен в корзину!</b>
+    <section class="modal modal--cart hidden">
+      <div class="modal__inner">
+        <h2 class="visually-hidden">Добавление товара в корзину</h2>
+        <b>Товар добавлен в корзину!</b>
+      </div>
       <div class="modal__buttons">
         <a class="button" href="order.html">Оформить заказ</a>
         <a class="button button--continue" href="#">Продолжить покупки</a>
       </div>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>

@@ -12,15 +12,22 @@
       <div class="header__top">
         <div class="container">
           <a class="logo header__logo">
-            <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="109" height="19">
+            <img src="img/logo.svg" alt="Логотип интернет-магазина «Техномарт»" width="108" height="18">
           </a>
           <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
-            <button type="submit">Искать</button>
+            <input class="header__search-field" type="search" name="search" placeholder="Поиск:" aria-label="Форма поиска">
+            <button class="header__search-button" type="submit">
+              <svg width="17" height="17">
+                <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" fill="#ffffff"></path>
+              </svg>
+              <span class="visually-hidden">Искать</span>
+            </button>
           </form>
-          <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
-          <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
-          <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+          <div class="header__buttons">
+            <a class="header__button header__button--bookmarks" href="bookmarks.html">Закладки: 0</a>
+            <a class="header__button header__button--cart" href="cart.html">Корзина: 0</a>
+            <a class="header__button header__button--order" href="order.html">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="container">
@@ -31,8 +38,16 @@
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
           <div class="user-nav">
-            <a class="user-nav__button user-nav__button--login" href="login.html">Войти</a>
-            <a class="user-nav__button" href="signup.html">Регистрация</a>
+            <div class="user-nav__login">
+              <a class="user-nav__button user-nav__button--login" href="login.html">
+                <svg width="20" height="17">
+                  <path d="M14.875 8.5L6 0v6H0v5h6v6z" fill="#c5c5c5"></path>
+                  <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" fill="#c5c5c5"></path>
+                </svg>
+                Войти
+              </a>
+              <a class="user-nav__button" href="signup.html">Регистрация</a>
+            </div>
           </div>
         </div>
         <nav class="site-nav header__nav">
@@ -102,7 +117,7 @@
           <a class="button heading__button" href="#">Все популярные товары</a>
         </div>
         <div class="popular__list">
-          <article class="product">
+          <article class="product popular__product">
             <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
@@ -119,7 +134,7 @@
               <a class="button button--bookmarks" href="#">В закладки</a>
             </p>
           </article>
-          <article class="product">
+          <article class="product popular__product">
             <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
@@ -136,7 +151,7 @@
               <a class="button button--bookmarks" href="#">В закладки</a>
             </p>
           </article>
-          <article class="product">
+          <article class="product popular__product">
             <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
@@ -153,7 +168,7 @@
               <a class="button button--bookmarks" href="#">В закладки</a>
             </p>
           </article>
-          <article class="product product--new">
+          <article class="product popular__product product--new">
             <h3 class="product__title">
               <a href="catalog-item.html">
                 Перфоратор
@@ -278,10 +293,10 @@
       <div class="footer__top container">
         <div class="footer__column">
           <a class="logo logo--footer footer__logo">
-            <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="138" height="23">
+            <img src="img/logo-footer.svg" alt="Логотип интернет-магазина «Техномарт»" width="137" height="22">
           </a>
           <address class="footer__contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             +7 (812) 555-05-55
           </address>
         </div>
@@ -308,9 +323,15 @@
             Все права защищены
           </p>
           <div class="social footer__social">
-            <a class="social__button social__button--vk" href="#">Компания «Техномарт» во ВКонтакте</a>
-            <a class="social__button social__button--fb" href="#">Компания «Техномарт» на Фейсбуке</a>
-            <a class="social__button social__button--in" href="#">Компания «Техномарт» в Инстаграме</a>
+            <a class="social__button social__button--vk" href="#">
+              <span class="visually-hidden">Компания «Техномарт» во ВКонтакте</span>
+            </a>
+            <a class="social__button social__button--fb" href="#">
+              <span class="visually-hidden">Компания «Техномарт» на Фейсбуке</span>
+            </a>
+            <a class="social__button social__button--in" href="#">
+              <span class="visually-hidden">Компания «Техномарт» в Инстаграме</span>
+            </a>
           </div>
           <p class="footer__email">
             Обратная связь:
@@ -324,32 +345,38 @@
       </div>
     </footer>
 
-    <section class="modal modal--contacts">
+    <section class="modal modal--contacts hidden">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="contacts-form__item">
-          <label for="contacts-name">Ваше имя:</label>
-          <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
-        </div>
-        <div class="contacts-form__item">
-          <label for="contacts-email">Ваш e-mail:</label>
-          <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
-        </div>
-        <div class="contacts-form__item">
-          <label for="contacts-message">Текст письма:</label>
-          <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+        <div class="contacts-form__inner">
+          <div class="contacts-form__item">
+            <label for="contacts-name">Ваше имя:</label>
+            <input id="contacts-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="contacts-form__item">
+            <label for="contacts-email">Ваш e-mail:</label>
+            <input id="contacts-email" type="email" name="email" placeholder="email@example.com">
+          </div>
+          <div class="contacts-form__item contacts-form__item--wide">
+            <label for="contacts-message">Текст письма:</label>
+            <textarea id="contacts-message" name="message" placeholder="В свободной форме"></textarea>
+          </div>
         </div>
         <div class="modal__buttons">
           <button class="button" type="submit">Отправить</button>
         </div>
       </form>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
 
-    <section class="modal modal--map">
+    <section class="modal modal--map hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6509465573246!2d30.322500229274443!3d59.93871649886725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1558345574596!5m2!1sru!2sru" width="940" height="446" aria-label="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" allowfullscreen></iframe>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
