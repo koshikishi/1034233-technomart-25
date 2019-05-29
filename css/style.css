@@ -400,11 +400,32 @@ img {
 }
 
 .user-nav__account {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   padding-right: 18px;
   padding-left: 18px;
+  list-style: none;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
+}
+
+.user-nav__account li + li {
+  position: relative;
+  margin-left: 33px;
+}
+
+.user-nav__account li + li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -17px;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
 }
 
 .user-nav__account a {
@@ -419,22 +440,6 @@ img {
 
 .user-nav__account a:active {
   color: rgba(50, 66, 92, 0.3);
-}
-
-.user-nav__account a + a {
-  position: relative;
-  margin-left: 29px;
-}
-
-.user-nav__account a + a::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: -17px;
-  width: 4px;
-  height: 4px;
-  background-color: #32425c;
-  border-radius: 50%;
 }
 
 /* Основная навигация по сайту */
