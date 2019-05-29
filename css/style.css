@@ -42,7 +42,9 @@ img {
 /* Стили для кнопок сайта */
 .button {
   display: inline-block;
-  padding: 10px 40px;
+  box-sizing: content-box;
+  min-width: 155px;
+  padding: 10px 20px;
   font: 14px/18px "Cuprum", "Arial", sans-serif;
   text-align: center;
   color: #ffffff;
@@ -64,6 +66,7 @@ img {
 
 .button-second {
   display: inline-block;
+  box-sizing: content-box;
   padding: 9px 12px;
   font: 13px/18px "PT Sans", "Arial", sans-serif;
   text-align: center;
@@ -519,8 +522,6 @@ img {
 
 .button--promo {
   min-width: 95px;
-  padding-right: 20px;
-  padding-left: 20px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -643,13 +644,6 @@ img {
   margin: 0;
 }
 
-.slider__item .button {
-  position: absolute;
-  bottom: 22px;
-  left: 25px;
-  min-width: 115px;
-}
-
 .slider__item--perforator {
   background-image: url("../img/slider-1.jpg");
 }
@@ -670,6 +664,12 @@ img {
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.slider__button {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
 }
 
 /* Блок популярных товаров */
@@ -704,8 +704,8 @@ img {
   color: #32425c;
 }
 
-.heading .button {
-  min-width: 173px;
+.button--wide {
+  min-width: 213px;
 }
 
 /* Карточка товара */
@@ -827,6 +827,7 @@ img {
 
 .button--buy {
   position: relative;
+  min-width: auto;
   padding-right: 10px;
   padding-left: 10px;
   background-color: #63a63e;
@@ -861,6 +862,7 @@ img {
 }
 
 .button--bookmarks {
+  min-width: auto;
   padding: 7px 10px;
   color: #32425c;
   background-color: #ffffff;
@@ -1126,6 +1128,10 @@ img {
   background-color: #ee3643;
 }
 
+.button--medium {
+  min-width: 180px;
+}
+
 /* Блок контактов */
 .contacts {
   width: 300px;
@@ -1146,8 +1152,9 @@ img {
   margin-bottom: 32px;
 }
 
-.contacts .button {
+.button--full {
   display: block;
+  flex-grow: 1;
 }
 
 /* «Хлебные крошки» */
@@ -1367,8 +1374,7 @@ img {
   cursor: default;
 }
 
-.button-second--wide {
-  box-sizing: content-box;
+.button-second--medium {
   min-width: 114px;
 }
 
@@ -1656,6 +1662,7 @@ img {
 /* Всплывающие окна */
 .modal {
   position: relative;
+  z-index: 10;
   background-color: #ffffff;
   border-top: 7px solid #ff5257;
 }
@@ -1777,10 +1784,6 @@ img {
 .contacts-form__item input:focus,
 .contacts-form__item textarea:focus {
   border-color: #ee3643;
-}
-
-.modal--contacts .button {
-  flex-grow: 1;
 }
 
 /* Всплывающее окно с картой */
