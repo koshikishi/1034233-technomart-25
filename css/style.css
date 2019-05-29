@@ -491,18 +491,36 @@ img {
 
 /* Карточки промо-блока */
 .promo-card {
-  width: 300px;
-  min-height: 123px;
+  position: relative;
+  width: 254px;
+  min-height: 81px;
+  padding: 21px 23px;
   color: #ffffff;
   background-color: #c5c5c5;
+  background-repeat: no-repeat;
+}
+
+.promo-card--new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 60px;
+  height: 59px;
+  background: url("../img/new-flag.png") 0 0 no-repeat;
 }
 
 .promo-card h3 {
   margin: 0;
+  margin-bottom: 13px;
   font: bold 24px/30px "Cuprum", "Arial", sans-serif;
 }
 
 .button--promo {
+  min-width: 95px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -517,36 +535,119 @@ img {
 
 .promo-card--material {
   background-color: #ffbf47;
+  background-image: url("../img/promo-material.svg");
+  background-position: top 31px right 43px;
 }
 
 .promo-card--tools {
   background-color: #3bbce3;
+  background-image: url("../img/promo-tools.svg");
+  background-position: top 33px right 28px;
 }
 
 .promo-card--tech {
   background-color: #dc91d8;
+  background-image: url("../img/promo-tech.svg");
+  background-position: top 31px right 31px;
 }
 
 .promo-card--sale {
   background-color: #8ed78f;
+  background-image: url("../img/promo-sale.svg");
+  background-position: top 26px right 45px;
 }
 
 .promo-card--delivery {
   background-color: #ffc047;
+  background-image: url("../img/promo-delivery.svg");
+  background-position: top 32px right 31px;
 }
 
 /* Слайдер промо-блока */
 .slider {
+  position: relative;
   width: 620px;
   height: 266px;
   font: 18px/24px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
 }
 
+.slider__control {
+  position: absolute;
+  right: 230px;
+  bottom: 36px;
+  left: 230px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__control label {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__control label + label {
+  margin-left: 10px;
+}
+
+.slider__control label::before,
+.slider__control label::after {
+  position: absolute;
+  top: -100px;
+  width: 25px;
+  height: 25px;
+  border: 0 solid #ffffff;
+  border-top-width: 3px;
+  border-right-width: 3px;
+}
+
+.slider__control label::before {
+  left: -199px;
+  transform: rotate(-135deg);
+}
+
+.slider__control label::after {
+  right: -204px;
+  transform: rotate(45deg);
+}
+
+.slider__radio:nth-of-type(1):checked ~ .slider__control label[for="slider-1"],
+.slider__radio:nth-of-type(2):checked ~ .slider__control label[for="slider-2"] {
+  background-color: #ee3643;
+}
+
+.slider__radio:nth-of-type(1):checked ~ .slider__control label[for="slider-2"]::before,
+.slider__radio:nth-of-type(1):checked ~ .slider__control label[for="slider-2"]::after,
+.slider__radio:nth-of-type(2):checked ~ .slider__control label[for="slider-1"]::before,
+.slider__radio:nth-of-type(2):checked ~ .slider__control label[for="slider-1"]::after {
+  content: "";
+}
+
 .slider__item {
+  position: absolute;
+  z-index: 0;
+  width: 570px;
+  height: 221px;
+  padding: 23px 25px 22px;
   background-color: #c5c5c5;
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.slider__item p {
+  margin: 0;
+}
+
+.slider__item .button {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+  min-width: 115px;
 }
 
 .slider__item--perforator {
@@ -557,8 +658,14 @@ img {
   background-image: url("../img/slider-2.jpg");
 }
 
+.slider__radio:nth-of-type(1):checked ~ .slider__inner .slider__item--perforator,
+.slider__radio:nth-of-type(2):checked ~ .slider__inner .slider__item--drill {
+  z-index: 1;
+}
+
 .slider__title {
   margin: 0;
+  margin-bottom: 2px;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
