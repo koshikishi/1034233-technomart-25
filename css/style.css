@@ -936,16 +936,24 @@ img {
 /* Блок сервисов */
 .page__services {
   margin-top: 20px;
-  margin-bottom: 79px;
+  margin-bottom: 80px;
 }
 
 .services {
-  padding-top: 63px;
+  padding-top: 65px;
   background-color: #f2f6f8;
+}
+
+.services__text {
+  width: 400px;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 23px;
 }
 
 /* Слайдер сервисов */
 .tabs {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -963,12 +971,16 @@ img {
 }
 
 .tabs__button {
+  width: 240px;
+  height: 62px;
+  padding: 10px 22px 14px;
   font: bold 21px/30px "Cuprum", "Arial", sans-serif;
-  vertical-align: middle;
   text-align: left;
   color: #ffffff;
   background-color: #32425c;
   border: none;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
   cursor: pointer;
 }
 
@@ -982,19 +994,74 @@ img {
 .tabs__button--current {
   color: #32425c;
   background-color: #ffffff;
+  border-color: transparent;
 }
 
 .tabs__item {
-  display: none;
+  position: absolute;
+  left: 240px;
+  z-index: 0;
   width: 620px;
-  height: 288px;
+  height: 286px;
   margin: 0;
-  padding-top: 42px;
+  padding-top: 44px;
   padding-left: 80px;
+  background-color: #f2f6f8;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.tabs__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 10px;
+  height: 279px;
+  background: url("../img/services-shadow.png") 0 0 no-repeat;
+  opacity: 0.25;
+}
+
+.tabs__item p {
+  margin: 0;
 }
 
 .tabs__item--current {
-  display: block;
+  z-index: 1;
+}
+
+.tabs__item--delivery {
+  background-image: url("../img/services-delivery.png");
+}
+
+.tabs__item--delivery p {
+  width: 277px;
+}
+
+.tabs__item--warranty {
+  width: 630px;
+  background-image: url("../img/services-warranty.png");
+}
+
+.tabs__item--warranty p {
+  width: 377px;
+}
+
+.tabs__item--credit {
+  width: 630px;
+  background-image: url("../img/services-credit.png");
+}
+
+.tabs__item--credit p {
+  margin-bottom: 26px;
+}
+
+.tabs__item--credit .button {
+  min-width: 115px;
+}
+
+.tabs__title {
+  margin-bottom: 25px;
 }
 
 .title--tabs {
