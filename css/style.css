@@ -1447,8 +1447,15 @@ img {
 }
 
 .modal__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 37px 80px;
   background-color: #f4f4f4;
+}
+
+.modal__buttons .button {
+  flex-basis: 140px;
 }
 
 .modal__close {
@@ -1559,8 +1566,7 @@ img {
 }
 
 .modal--contacts .button {
-  display: block;
-  width: 100%;
+  flex-grow: 1;
 }
 
 /* Всплывающее окно с картой */
@@ -1578,6 +1584,54 @@ img {
 
 .modal--map iframe {
   border: none;
+}
+
+/* Всплывающее окно с добавлением товара в корзину */
+.modal--cart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  min-height: 275px;
+  box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+  transform: translate(-50%, -50%);
+}
+
+.modal__inner {
+  display: table;
+  min-height: 66px;
+  padding: 48px 80px 49px 180px;
+}
+
+.modal--cart b {
+  position: relative;
+  display: table-cell;
+  font: 30px/30px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
+}
+
+.modal--cart b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -99px;
+  width: 66px;
+  height: 66px;
+  background: url("../img/icon-success.svg") 0 0 no-repeat;
+}
+
+.button--continue {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button--continue:hover,
+.button--continue:focus {
+  background-color: #dbd9d9;
+}
+
+.button--continue:active {
+  background-color: #ccc8c8;
 }
 
 /* Доступное скрытие элемента */
