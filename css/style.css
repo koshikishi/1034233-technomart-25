@@ -1152,6 +1152,7 @@ img {
 
 .filters-form__input:disabled + label {
   color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
 .button-second--wide {
