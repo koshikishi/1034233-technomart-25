@@ -694,12 +694,18 @@ img {
 .heading {
   display: flex;
   justify-content: space-between;
-  padding: 30px 24px 29px 28px;
+  align-items: center;
+  min-height: 38px;
+  padding: 25px 24px 26px 28px;
   background-color: #f9f5f0;
 }
 
 .title--heading {
   color: #32425c;
+}
+
+.heading .button {
+  min-width: 173px;
 }
 
 /* Карточка товара */
