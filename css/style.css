@@ -938,7 +938,7 @@ img {
 /* Блок сервисов */
 .page__services {
   margin-top: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 79px;
 }
 
 .services {
@@ -1246,28 +1246,61 @@ img {
 }
 
 .filters-form__slider {
+  position: relative;
   height: 80px;
   margin-bottom: 9px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: #f7f3ec;
   border-radius: 3px;
 }
 
 .filters-form__range {
+  position: absolute;
+  top: 39px;
+  width: 180px;
+  height: 2px;
   background-color: #d7dcde;
 }
 
 .filters-form__track {
+  position: absolute;
+  right: 30px;
+  left: 0;
+  height: 100%;
   background-color: #00ca74;
 }
 
+.filters-form__thumb {
+  position: absolute;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px rgba(171, 171, 171, 0.3);
+  cursor: ew-resize;
+}
+
+.filters-form__thumb:last-of-type {
+  right: 40px;
+}
+
 .filters-form__price {
-  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
 }
 
 .filters-form__price input {
+  width: 95px;
+  height: 38px;
+  padding: 0;
   font: inherit;
   font-size: 17px;
   text-align: center;
@@ -1275,6 +1308,12 @@ img {
   background-color: #f7f3ec;
   border: none;
   border-radius: 3px;
+  appearance: textfield;
+}
+
+.filters-form__price input::-webkit-inner-spin-button,
+.filters-form__price input::-webkit-outer-spin-button {
+  appearance: none;
 }
 
 .filters-form__option {
