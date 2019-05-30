@@ -1005,7 +1005,7 @@ img {
 .tabs__item {
   position: absolute;
   left: 240px;
-  z-index: 0;
+  z-index: -1;
   width: 620px;
   height: 286px;
   margin: 0;
@@ -1550,6 +1550,7 @@ img {
   color: #ffffff;
   background-color: #ee3643;
   border-color: #ee3643;
+  cursor: auto;
 }
 
 /* Описание категории товара */
