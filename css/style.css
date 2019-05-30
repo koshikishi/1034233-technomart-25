@@ -1893,7 +1893,7 @@ img {
 
 .modal__inner {
   display: table;
-  min-height: 66px;
+  height: 66px;
   padding: 48px 80px 49px 180px;
 }
 
