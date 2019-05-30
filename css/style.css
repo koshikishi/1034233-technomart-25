@@ -67,7 +67,7 @@ img {
 .button-second {
   display: inline-block;
   box-sizing: content-box;
-  padding: 9px 12px;
+  padding: 9px 14px 9px 15px;
   font: 13px/18px "PT Sans", "Arial", sans-serif;
   text-align: center;
   color: #000000;
@@ -1414,7 +1414,7 @@ img {
 }
 
 .button-second--medium {
-  min-width: 114px;
+  min-width: 109px;
 }
 
 /* Колонка */
@@ -1558,9 +1558,17 @@ img {
 }
 
 .description {
-  padding-top: 63px;
-  padding-bottom: 73px;
+  padding-top: 65px;
+  padding-bottom: 68px;
   background-color: #f2f6f8;
+}
+
+.description__title {
+  margin-bottom: 26px;
+}
+
+.description p {
+  margin: 0;
 }
 
 /* Подвал сайта */
