@@ -743,6 +743,7 @@ img {
 }
 
 .product__title {
+  width: 178px;
   margin: 0;
   margin-bottom: 11px;
   padding-right: 20px;
@@ -756,13 +757,13 @@ img {
   color: inherit;
 }
 
+.product__model {
+  text-transform: uppercase;
+}
+
 .product__image {
   order: -1;
   margin-bottom: 9px;
-}
-
-.product__model {
-  text-transform: uppercase;
 }
 
 .product__price {
@@ -815,7 +816,7 @@ img {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 84px;
+  height: 84px;
   margin: 0;
   padding: 43px 41px;
   background-color: #ffffff;
@@ -1004,6 +1005,7 @@ img {
 
 .tabs__item {
   position: absolute;
+  top: 0;
   left: 240px;
   z-index: -1;
   width: 620px;
