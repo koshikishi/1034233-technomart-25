@@ -481,6 +481,7 @@ img {
 
 .promo__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 }
@@ -1539,6 +1540,7 @@ img {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination__link + .pagination__link {
