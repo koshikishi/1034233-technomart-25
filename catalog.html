@@ -104,8 +104,12 @@
                   <div class="filters-form__range">
                     <div class="filters-form__track"></div>
                   </div>
-                  <button class="filters-form__thumb" type="button">Минимальная цена</button>
-                  <button class="filters-form__thumb" type="button">Максимальная цена</button>
+                  <button class="filters-form__thumb" type="button">
+                    <span class="visually-hidden">Минимальная цена</span>
+                  </button>
+                  <button class="filters-form__thumb" type="button">
+                    <span class="visually-hidden">Максимальная цена</span>
+                  </button>
                 </div>
                 <div class="filters-form__price">
                   <input type="number" name="min-price" value="0" aria-label="Минимальная цена">
@@ -147,7 +151,7 @@
                   <label for="filter-mains-supply">Сетевые</label>
                 </div>
               </fieldset>
-              <button class="button-second button-second--wide" type="submit">Показать</button>
+              <button class="button-second button-second--medium" type="submit">Показать</button>
             </form>
           </section>
 
@@ -160,8 +164,12 @@
                 <a class="sorting__button" href="#">По функционалу</a>
               </div>
               <div class="sorting__order">
-                <a class="sorting__arrow sorting__arrow--up sorting__arrow--active" href="#">По возрастанию</a>
-                <a class="sorting__arrow sorting__arrow--down" href="#">По убыванию</a>
+                <a class="sorting__arrow sorting__arrow--up sorting__arrow--active" href="#">
+                  <span class="visually-hidden">По возрастанию</span>
+                </a>
+                <a class="sorting__arrow sorting__arrow--down" href="#">
+                  <span class="visually-hidden">По убыванию</span>
+                </a>
               </div>
             </section>
 
@@ -323,7 +331,7 @@
                 <a class="button-second button-second--current pagination__link" aria-label="Мы на первой странице">1</a>
                 <a class="button-second pagination__link" href="#" aria-label="На вторую страницу">2</a>
                 <a class="button-second pagination__link" href="#" aria-label="На третью страницу">3</a>
-                <a class="button-second pagination__link button-second--wide" href="#" aria-label="На следующую страницу">Следующая</a>
+                <a class="button-second pagination__link button-second--medium" href="#" aria-label="На следующую страницу">Следующая</a>
               </div>
             </section>
           </div>
@@ -332,7 +340,7 @@
 
       <section class="description page__description">
         <div class="container">
-          <h2 class="title">Пара слов о перфораторах</h2>
+          <h2 class="title description__title">Пара слов о перфораторах</h2>
           <p>
             Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
@@ -403,8 +411,8 @@
         <b>Товар добавлен в корзину!</b>
       </div>
       <div class="modal__buttons">
-        <a class="button" href="order.html">Оформить заказ</a>
-        <a class="button button--continue" href="#">Продолжить покупки</a>
+        <a class="button button--medium" href="order.html">Оформить заказ</a>
+        <a class="button button--medium button--continue" href="#">Продолжить покупки</a>
       </div>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
