@@ -814,17 +814,19 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 84px;
   margin: 0;
   padding: 43px 41px;
   background-color: #ffffff;
+  opacity: 0;
 }
 
-.product:hover .product__buttons {
-  display: flex;
+.product:hover .product__buttons,
+.product:focus-within .product__buttons {
+  opacity: 1;
 }
 
 .button--buy {
