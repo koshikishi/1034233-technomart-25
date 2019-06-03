@@ -514,14 +514,20 @@ img {
 }
 
 .promo-card--new::before {
-  content: "";
+  content: "new";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 7px;
+  right: -22px;
   z-index: 5;
-  width: 60px;
-  height: 59px;
-  background: url("../img/new-flag.png") 0 0 no-repeat;
+  width: 28px;
+  height: 0;
+  padding-left: 2px;
+  font: 15px/28px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  border: 27px solid transparent;
+  border-top: none;
+  border-bottom-color: #ee3643;
+  transform: rotate(45deg);
 }
 
 .promo-card h3 {
@@ -747,14 +753,20 @@ img {
 }
 
 .product--new::before {
-  content: "";
+  content: "new";
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 6px;
+  right: -23px;
   z-index: 5;
-  width: 60px;
-  height: 59px;
-  background: url("../img/new-flag.png") 0 0 no-repeat;
+  width: 30px;
+  height: 0;
+  font: 15px/28px "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+  border: 27px solid transparent;
+  border-top: none;
+  border-bottom-color: #ee3643;
+  transform: rotate(45deg);
+  pointer-events: none;
 }
 
 .product__title {
