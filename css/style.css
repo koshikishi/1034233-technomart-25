@@ -58,6 +58,7 @@ img {
 .button:hover,
 .button:focus {
   background-color: #ca2c37;
+  outline: none;
 }
 
 .button:active {
@@ -81,6 +82,7 @@ img {
 .button-second:hover,
 .button-second:focus {
   border-color: #bdc6ca;
+  outline: none;
 }
 
 .button-second:active {
@@ -131,6 +133,7 @@ img {
 .logo[href]:hover,
 .logo[href]:focus {
   background-color: #ca2c37;
+  outline: none;
 }
 
 .logo[href]:active {
@@ -167,6 +170,7 @@ img {
 .header__search-field:focus {
   color: #000000;
   background-color: #ffffff;
+  outline: none;
 }
 
 .header__search-field:focus::placeholder {
@@ -187,6 +191,7 @@ img {
 .header__search-button:hover,
 .header__search-button:focus {
   background-color: #212a3a;
+  outline: none;
   opacity: 1;
 }
 
@@ -219,6 +224,7 @@ img {
 .header__button:hover,
 .header__button:focus {
   background-color: #212a3a;
+  outline: none;
 }
 
 .header__button:active {
@@ -357,6 +363,7 @@ img {
 .user-nav__button:hover,
 .user-nav__button:focus {
   color: #ee3643;
+  outline: none;
 }
 
 .user-nav__button svg {
@@ -439,6 +446,7 @@ img {
 .user-nav__account a:hover,
 .user-nav__account a:focus {
   color: #ee3643;
+  outline: none;
 }
 
 .user-nav__account a:active {
@@ -466,6 +474,7 @@ img {
 .site-nav a:hover,
 .site-nav a:focus {
   background-color: #293449;
+  outline: none;
 }
 
 .site-nav a:active {
@@ -727,7 +736,8 @@ img {
   border: 1px solid #e5e5e5;
 }
 
-.product:hover {
+.product:hover,
+.product:focus-within {
   border-color: transparent;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
@@ -909,6 +919,7 @@ img {
 .brands__link:hover,
 .brands__link:focus {
   border-color: transparent;
+  outline: none;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -982,6 +993,7 @@ img {
 .tabs__button:focus {
   color: #ffffff;
   background-color: #293449;
+  outline: none;
 }
 
 .tabs__button:active,
@@ -1447,6 +1459,7 @@ img {
 .sorting__button:focus {
   color: #000000;
   border-bottom: 1px solid #ee3643;
+  outline: none;
 }
 
 .sorting__button:active,
@@ -1473,6 +1486,7 @@ img {
 .sorting__arrow:focus {
   border-top-color: #231f20;
   border-bottom-color: #231f20;
+  outline: none;
 }
 
 .sorting__arrow:active,
@@ -1635,6 +1649,7 @@ img {
 .second-nav a:hover,
 .second-nav a:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 .second-nav a:active {
@@ -1687,6 +1702,7 @@ img {
 .social__button:focus,
 .social__button:active {
   background-color: #ee3643;
+  outline: none;
 }
 
 .social__button--vk {
@@ -1709,6 +1725,7 @@ img {
 .footer__bottom a:hover,
 .footer__bottom a:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 .footer__bottom a:active {
