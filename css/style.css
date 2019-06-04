@@ -49,6 +49,8 @@ img {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #ee3643;
   border: none;
   border-radius: 3px;
@@ -73,6 +75,8 @@ img {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -219,6 +223,8 @@ img {
   padding: 12px 10px;
   text-align: center;
   color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .header__button:hover,
@@ -355,8 +361,11 @@ img {
 
 .user-nav__button {
   position: relative;
+  max-width: 102px;
   padding: 12px 24px;
   color: #000000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #ffffff;
 }
 
@@ -382,12 +391,14 @@ img {
 }
 
 .user-nav__button--login {
+  max-width: 67px;
   margin-right: 10px;
   padding-left: 49px;
 }
 
 .user-nav__button--profile {
   flex-grow: 1;
+  max-width: 207px;
   padding-right: 0;
   padding-left: 48px;
 }
@@ -466,9 +477,12 @@ img {
 }
 
 .site-nav a {
+  max-width: 250px;
   padding: 20px 31px;
   text-align: center;
   color: inherit;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .site-nav a:hover,
@@ -505,9 +519,9 @@ img {
 /* Карточки промо-блока */
 .promo-card {
   position: relative;
-  width: 254px;
+  width: 147px;
   min-height: 81px;
-  padding: 21px 23px;
+  padding: 21px 130px 21px 23px;
   color: #ffffff;
   background-color: #c5c5c5;
   background-repeat: no-repeat;
@@ -538,6 +552,7 @@ img {
 
 .button--promo {
   min-width: 95px;
+  max-width: 107px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -591,12 +606,14 @@ img {
 
 .slider__control {
   position: absolute;
-  right: 230px;
   bottom: 36px;
-  left: 230px;
+  left: 50%;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 30px;
+  transform: translateX(-50%);
 }
 
 .slider__control label {
@@ -624,17 +641,19 @@ img {
 }
 
 .slider__control label::before {
-  left: -199px;
+  left: -264px;
   transform: rotate(-135deg);
 }
 
 .slider__control label::after {
-  right: -204px;
+  right: -269px;
   transform: rotate(45deg);
 }
 
-.slider__radio:focus ~ .slider__control label {
-  box-shadow: 0 0 5px 1px #ffffff;
+#slider-1:focus ~ .slider__control label[for="slider-1"],
+#slider-2:focus ~ .slider__control label[for="slider-2"] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #slider-1:checked ~ .slider__control label[for="slider-1"],
@@ -690,6 +709,7 @@ img {
   position: absolute;
   bottom: 22px;
   left: 25px;
+  max-width: 220px;
 }
 
 /* Блок популярных товаров */
@@ -724,8 +744,13 @@ img {
   color: #32425c;
 }
 
+.heading__button {
+  margin-left: 24px;
+}
+
 .button--wide {
-  min-width: 213px;
+  width: 213px;
+  min-width: auto;
 }
 
 /* Карточка товара */
@@ -778,6 +803,8 @@ img {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .product__title a {
@@ -798,6 +825,8 @@ img {
   flex-direction: column;
   margin: 0;
   margin-top: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -812,7 +841,7 @@ img {
 
 .product__price b {
   position: relative;
-  width: 112px;
+  min-width: 112px;
   margin-right: 11px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -859,7 +888,8 @@ img {
   position: relative;
   min-width: auto;
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 49px;
+  text-align: left;
   background-color: #63a63e;
   box-shadow: inset 0 -3px #367315;
 }
@@ -991,13 +1021,15 @@ img {
   margin-top: 46px;
 }
 
-.tabs__button {
+.tabs__selector {
   width: 240px;
-  height: 62px;
+  min-height: 62px;
   padding: 10px 22px 14px;
   font: bold 21px/30px "Cuprum", "Arial", sans-serif;
   text-align: left;
   color: #ffffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   background-color: #32425c;
   border: none;
   border-top: 1px solid #405069;
@@ -1005,15 +1037,15 @@ img {
   cursor: pointer;
 }
 
-.tabs__button:hover,
-.tabs__button:focus {
+.tabs__selector:hover,
+.tabs__selector:focus {
   color: #ffffff;
   background-color: #293449;
   outline: none;
 }
 
-.tabs__button:active,
-.tabs__button--current {
+.tabs__selector:active,
+.tabs__selector--current {
   color: #32425c;
   background-color: #ffffff;
   border-color: transparent;
@@ -1024,11 +1056,10 @@ img {
   top: 0;
   left: 240px;
   display: none;
-  width: 620px;
-  height: 286px;
+  width: 377px;
+  height: 242px;
   margin: 0;
-  padding-top: 44px;
-  padding-left: 80px;
+  padding: 44px 243px 44px 80px;
   background-color: #f2f6f8;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -1062,16 +1093,12 @@ img {
 }
 
 .tabs__item--warranty {
-  width: 630px;
+  padding-right: 253px;
   background-image: url("../img/services-warranty.png");
 }
 
-.tabs__item--warranty p {
-  width: 377px;
-}
-
 .tabs__item--credit {
-  width: 630px;
+  padding-right: 253px;
   background-image: url("../img/services-credit.png");
 }
 
@@ -1079,7 +1106,7 @@ img {
   margin-bottom: 26px;
 }
 
-.tabs__item--credit .button {
+.tabs__button {
   min-width: 115px;
 }
 
@@ -1316,9 +1343,8 @@ img {
 }
 
 .filters-form__price input {
-  width: 95px;
-  height: 38px;
-  padding: 0;
+  width: 75px;
+  padding: 10px;
   font: inherit;
   font-size: 17px;
   text-align: center;
@@ -1451,6 +1477,7 @@ img {
 
 .sorting__title {
   margin-right: auto;
+  padding-right: 18px;
 }
 
 .sorting__type {
@@ -1608,7 +1635,9 @@ img {
 }
 
 .footer__column {
+  flex-shrink: 0;
   width: 330px;
+  margin-right: 20px;
 }
 
 /* Логотип сайта в подвале */
@@ -1629,7 +1658,6 @@ img {
 
 /* Дополнительная навигация по сайту */
 .footer__nav {
-  width: 560px;
   padding-top: 38px;
 }
 
@@ -1771,8 +1799,8 @@ img {
   background-color: #f4f4f4;
 }
 
-.modal__buttons .button {
-  flex-basis: 140px;
+.modal__button {
+  max-width: 180px;
 }
 
 .modal__close {
@@ -1852,6 +1880,7 @@ img {
   background-color: transparent;
   border: 2px solid #d7dcde;
   border-radius: 3px;
+  outline: none;
 }
 
 .contacts-form__item input {
