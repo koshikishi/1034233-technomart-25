@@ -46,6 +46,7 @@ img {
   min-width: 155px;
   padding: 10px 20px;
   font: 14px/18px "Cuprum", "Arial", sans-serif;
+  vertical-align: middle;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -72,6 +73,7 @@ img {
   box-sizing: content-box;
   padding: 9px 14px 9px 15px;
   font: 13px/18px "PT Sans", "Arial", sans-serif;
+  vertical-align: middle;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
@@ -1244,6 +1246,7 @@ img {
   width: 15px;
   height: 100%;
   min-height: 12px;
+  vertical-align: top;
   background: url("../img/icon-home.svg") -1px 2px no-repeat;
 }
 
