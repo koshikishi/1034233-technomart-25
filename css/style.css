@@ -1789,19 +1789,34 @@ img {
 /* Анимация всплывающих окон */
 @keyframes bounce {
   0% {
-    transform: translate(-2000px, -50%);
+    transform: translateX(-2000px);
   }
 
   70% {
-    transform: translate(calc(-50% + 30px), -50%);
+    transform: translateX(30px);
   }
 
   90% {
-    transform: translate(calc(-50% - 10px), -50%);
+    transform: translateX(-10px);
   }
 
   100% {
-    transform: translate(-50%, -50%);
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
   }
 }
 
@@ -1817,6 +1832,10 @@ img {
 .modal--shown {
   display: block;
   animation: bounce 0.6s;
+}
+
+.modal--error {
+  animation: shake 0.12s 5;
 }
 
 .modal__buttons {
@@ -1869,8 +1888,9 @@ img {
   left: 50%;
   width: 620px;
   min-height: 423px;
+  margin-top: -215px;
+  margin-left: -320px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-  transform: translate(-50%, -50%);
 }
 
 .contacts-form__inner {
@@ -1942,10 +1962,11 @@ img {
   left: 50%;
   width: 940px;
   height: 446px;
+  margin-top: -223px;
+  margin-left: -470px;
   background: #ebf0f0 url("../img/map-large.png") 0 0 no-repeat;
   border: none;
   box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
-  transform: translate(-50%, -50%);
 }
 
 .modal--map iframe {
@@ -1959,8 +1980,9 @@ img {
   left: 50%;
   width: 620px;
   min-height: 275px;
+  margin-top: -141px;
+  margin-left: -320px;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
-  transform: translate(-50%, -50%);
 }
 
 .modal__inner {
