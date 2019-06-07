@@ -98,7 +98,7 @@ var modalCart = document.querySelector('.modal--cart');
 if (modalCart) {
   var modalCartClose = modalCart.querySelector('.modal__close');
 
-  var addClickHandler = function (buyButton) {
+  var addBuyClickHandler = function (buyButton) {
     buyButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       modalShow(modalCart);
@@ -106,7 +106,7 @@ if (modalCart) {
   };
 
   for (var i = 0; i < cartButtons.length; i++) {
-    addClickHandler(cartButtons[i]);
+    addBuyClickHandler(cartButtons[i]);
   }
 
   modalCartClose.addEventListener('click', function (evt) {
@@ -129,6 +129,33 @@ var overlay = document.querySelector('.overlay');
 overlay.addEventListener('click', function () {
   modalClose();
 });
+
+// Оживление слайдера «Сервисы»
+var serviceTabs = document.querySelectorAll('.tabs__selector');
+var serviceSlides = document.querySelectorAll('.tabs__item');
+
+var serviceTabCurrent = document.querySelector('.tabs__selector--current');
+var serviceSlideCurrent = document.querySelector('.tabs__item--current');
+
+var addTabClickHandler = function (sliderTab, slide) {
+  sliderTab.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (sliderTab !== serviceTabCurrent) {
+      serviceTabCurrent.classList.remove('tabs__selector--current');
+      serviceSlideCurrent.classList.remove('tabs__item--current');
+
+      sliderTab.classList.add('tabs__selector--current');
+      slide.classList.add('tabs__item--current');
+
+      serviceTabCurrent = sliderTab;
+      serviceSlideCurrent = slide;
+    }
+  });
+};
+
+for (var i = 0; i < serviceTabs.length; i++) {
+  addTabClickHandler(serviceTabs[i], serviceSlides[i]);
+}
 
 // Появление всплывающего окна
 function modalShow(elmt) {
