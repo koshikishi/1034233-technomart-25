@@ -881,7 +881,10 @@ img {
   opacity: 0;
 }
 
-.product:hover .product__buttons,
+.product:hover .product__buttons {
+  opacity: 1;
+}
+
 .product:focus-within .product__buttons {
   opacity: 1;
 }
