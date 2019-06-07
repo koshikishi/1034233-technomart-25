@@ -1,3 +1,5 @@
+'use strict';
+
 var contactsLink = document.querySelector('.contacts__button');
 
 var modalContacts = document.querySelector('.modal--contacts');
@@ -51,7 +53,7 @@ contactsForm.addEventListener('submit', function (evt) {
   if (!userData.name.value || !userData.email.value || !userData.message.value) {
     evt.preventDefault();
     modalContacts.classList.remove('modal--error');
-    modalContacts.offsetWidth = modalContacts.offsetWidth;
+    void modalContacts.offsetWidth;
     modalContacts.classList.add('modal--error');
   } else {
     if (isStorageSupport) {
