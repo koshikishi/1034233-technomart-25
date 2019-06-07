@@ -5,35 +5,18 @@ var modalContactsClose = modalContacts.querySelector('.modal__close');
 
 var overlay = document.querySelector('.overlay');
 
+// Оживление всплывающего окна формы обратной связи
 contactsLink.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalContacts.classList.add('modal--shown');
-  overlay.classList.add('overlay--shown');
+  modalShow(modalContacts);
 });
 
 modalContactsClose.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalContacts.classList.remove('modal--shown');
-  overlay.classList.remove('overlay--shown');
+  modalClose(modalContacts);
 });
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (modalContacts.classList.contains('modal--shown')) {
-      modalContacts.classList.remove('modal--shown');
-      overlay.classList.remove('overlay--shown');
-    }
-  }
-});
-
-overlay.addEventListener('click', function () {
-  if (modalContacts.classList.contains('modal--shown')) {
-    modalContacts.classList.remove('modal--shown');
-    overlay.classList.remove('overlay--shown');
-  }
-});
-
+// Оживление всплывающего окна интерактивной карты
 var mapLink = document.querySelector('.contacts__map-image');
 
 var modalMap = document.querySelector('.modal--map');
@@ -41,29 +24,45 @@ var modalMapClose = modalMap.querySelector('.modal__close');
 
 mapLink.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalMap.classList.add('modal--shown');
-  overlay.classList.add('overlay--shown');
+  modalShow(modalMap);
 });
 
 modalMapClose.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalMap.classList.remove('modal--shown');
-  overlay.classList.remove('overlay--shown');
+  modalClose(modalMap);
 });
 
+// Закрытие всплывающего окна по нажатию Esc
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
+    if (modalContacts.classList.contains('modal--shown')) {
+      modalClose(modalContacts);
+    }
     if (modalMap.classList.contains('modal--shown')) {
-      modalMap.classList.remove('modal--shown');
-      overlay.classList.remove('overlay--shown');
+      modalClose(modalMap);
     }
   }
 });
 
+// Закрытие всплывающего окна по клику вне окна
 overlay.addEventListener('click', function () {
+  if (modalContacts.classList.contains('modal--shown')) {
+    modalClose(modalContacts);
+  }
   if (modalMap.classList.contains('modal--shown')) {
-    modalMap.classList.remove('modal--shown');
-    overlay.classList.remove('overlay--shown');
+    modalClose(modalMap);
   }
 });
+
+// Появление всплывающего окна
+function modalShow(elmt) {
+  elmt.classList.add('modal--shown');
+  overlay.classList.add('overlay--shown');
+}
+
+// Закрытие всплывающего окна
+function modalClose(elmt) {
+  elmt.classList.remove('modal--shown');
+  overlay.classList.remove('overlay--shown');
+}
