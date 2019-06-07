@@ -1,11 +1,11 @@
 'use strict';
 
+var overlay = document.querySelector('.overlay');
+
 var contactsLink = document.querySelector('.contacts__button');
 
 var modalContacts = document.querySelector('.modal--contacts');
 var modalContactsClose = modalContacts.querySelector('.modal__close');
-
-var overlay = document.querySelector('.overlay');
 
 var contactsForm = modalContacts.querySelector('.contacts-form');
 var userData = {
@@ -87,6 +87,28 @@ modalMapClose.addEventListener('click', function (evt) {
   modalClose(modalMap);
 });
 
+// Оживление всплывающего окна добавления товара в корзину
+var cartButtons = document.querySelectorAll('.button--buy');
+
+var modalCart = document.querySelector('.modal--cart');
+var modalCartClose = modalCart.querySelector('.modal__close');
+
+var addClickHandler = function (buyButton) {
+  buyButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalShow(modalCart);
+  });
+};
+
+for (var i = 0; i < cartButtons.length; i++) {
+  addClickHandler(cartButtons[i]);
+}
+
+modalCartClose.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modalClose(modalCart);
+});
+
 // Закрытие всплывающего окна по нажатию Esc
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
@@ -97,6 +119,9 @@ window.addEventListener('keydown', function (evt) {
     }
     if (modalMap.classList.contains('modal--shown')) {
       modalClose(modalMap);
+    }
+    if (modalCart.classList.contains('modal--shown')) {
+      modalClose(modalCart);
     }
   }
 });
@@ -109,6 +134,9 @@ overlay.addEventListener('click', function () {
   }
   if (modalMap.classList.contains('modal--shown')) {
     modalClose(modalMap);
+  }
+  if (modalCart.classList.contains('modal--shown')) {
+    modalClose(modalCart);
   }
 });
 
