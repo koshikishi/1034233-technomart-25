@@ -55,6 +55,14 @@ contactsForm.addEventListener('submit', function (evt) {
     modalContacts.classList.remove('modal--error');
     void modalContacts.offsetWidth;
     modalContacts.classList.add('modal--error');
+
+    if (!userData.name.value) {
+      userData.name.focus();
+    } else if (!userData.email.value) {
+      userData.email.focus();
+    } else {
+      userData.message.focus();
+    }
   } else {
     if (isStorageSupport) {
       localStorage.setItem('name', userData.name.value);
