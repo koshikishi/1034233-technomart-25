@@ -179,6 +179,36 @@ for (var i = 0; i < serviceTabs.length; i++) {
   addTabClickHandler(serviceTabs[i], serviceSlides[i]);
 }
 
+// Инициализация интерактивной карты
+function initMap() {
+  var coordinates = {
+    lat: 59.9387165,
+    lng: 30.3225002
+  };
+
+  var map = new google.maps.Map(document.querySelector('.map'), {
+    zoom: 16,
+    center: coordinates
+  });
+
+  var icon = {
+    path: 'M12 0a8 8 0 0 0-8 8c0 1.421.382 2.75 1.031 3.906.108.192.221.381.344.563L12 24l6.625-11.531c.102-.151.19-.311.281-.469l.063-.094A7.954 7.954 0 0 0 20 8a8 8 0 0 0-8-8zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8z',
+    fillColor: '#ee3643',
+    fillOpacity: 1,
+    anchor: new google.maps.Point(12, 24),
+    strokeColor: '#b52933',
+    strokeOpacity: 0.5,
+    strokeWeight: 2,
+    scale: 1.5
+  };
+
+  var marker = new google.maps.Marker({
+    position: coordinates,
+    map: map,
+    icon: icon
+  });
+}
+
 // Появление всплывающего окна
 function modalShow(elmt) {
   elmt.classList.add('modal--shown');

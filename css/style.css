@@ -1977,6 +1977,11 @@ img {
   border: none;
 }
 
+.map {
+  width: 940px;
+  height: 446px;
+}
+
 /* Всплывающее окно с добавлением товара в корзину */
 .modal--cart {
   position: fixed;
