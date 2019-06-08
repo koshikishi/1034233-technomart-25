@@ -195,7 +195,8 @@ img {
 }
 
 .header__search-button:hover,
-.header__search-button:focus {
+.header__search-button:focus,
+.header__search-field:hover + .header__search-button {
   background-color: #212a3a;
   outline: none;
   opacity: 1;
