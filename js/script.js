@@ -91,7 +91,12 @@ if (modalMap) {
 }
 
 // Оживление всплывающего окна добавления товара в корзину
+// и счётчиков корзины и закладок в шапке
 var cartButtons = document.querySelectorAll('.button--buy');
+var bookmarksButtons = document.querySelectorAll('.button--bookmarks');
+
+var cartCounter = document.querySelector('.header__button--cart');
+var bookmarksCounter = document.querySelector('.header__button--bookmarks');
 
 var modalCart = document.querySelector('.modal--cart');
 
@@ -102,11 +107,28 @@ if (modalCart) {
     buyButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       modalShow(modalCart);
+      increaseCounter(cartCounter);
+
+      if (!cartCounter.classList.contains('header__button--full')) {
+        cartCounter.classList.add('header__button--full');
+      }
+    });
+  };
+
+  var addBookmarksClickHandler = function (bookmarksButton) {
+    bookmarksButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      increaseCounter(bookmarksCounter);
+
+      if (!bookmarksCounter.classList.contains('header__button--full')) {
+        bookmarksCounter.classList.add('header__button--full');
+      }
     });
   };
 
   for (var i = 0; i < cartButtons.length; i++) {
     addBuyClickHandler(cartButtons[i]);
+    addBookmarksClickHandler(bookmarksButtons[i]);
   }
 
   modalCartClose.addEventListener('click', function (evt) {
@@ -175,4 +197,14 @@ function modalClose() {
       modalShown.classList.remove('modal--error');
     }
   }
+}
+
+// Увеличение счётчика на кнопке
+function increaseCounter(btn) {
+  var spacePosition = btn.textContent.indexOf(' ');
+  var btnCounter = btn.textContent.slice(spacePosition++);
+
+  btn.textContent = btn.textContent.slice(0, -(btnCounter.length - 1));
+  btnCounter = Number(btnCounter) + 1;
+  btn.textContent += btnCounter;
 }
