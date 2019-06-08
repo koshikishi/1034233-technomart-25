@@ -209,14 +209,14 @@ if (slider) {
   var track = slider.querySelector('.filters-form__track');
   var inputs = document.querySelectorAll('.filters-form__price input');
 
-  var rangeRatio = rangeWidth / price.max;
+  var rangeRatio = rangeWidth / (price.max - price.min);
   var currentPrice = {
     min: inputs[0].value,
     max: inputs[1].value
   };
 
-  thumbs[0].style.left = currentPrice.min * rangeRatio + sliderIndent + 'px';
-  track.style.left = currentPrice.min * rangeRatio + thumbHalfWidth + 'px';
+  thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
+  track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
 
   thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
   track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
@@ -224,22 +224,52 @@ if (slider) {
   // Вычисление для перетаскиваемого тумблера нового значения цены и положения на слайдере
   slider.addEventListener('mousemove', function (evt) {
     if (isDragging[0]) {
-      currentPrice.min = Math.round(mousePosX(slider, evt) / rangeRatio);
+      currentPrice.min = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
 
-      if (currentPrice.min < currentPrice.max && currentPrice.min >= 0) {
-        thumbs[0].style.left = currentPrice.min * rangeRatio + sliderIndent + 'px';
-        track.style.left = currentPrice.min * rangeRatio + thumbHalfWidth + 'px';
+      if (currentPrice.min < currentPrice.max && currentPrice.min >= price.min) {
+        thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
+        track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
         inputs[0].value = currentPrice.min;
       }
     }
     if (isDragging[1]) {
-      currentPrice.max = Math.round(mousePosX(slider, evt) / rangeRatio);
+      currentPrice.max = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
 
       if (currentPrice.max > currentPrice.min && currentPrice.max <= price.max) {
         thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
         track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
         inputs[1].value = currentPrice.max;
       }
+    }
+  });
+
+  // Вычисление нового положения тумблеров при изменении значений в полях ввода
+  inputs[0].addEventListener('blur', function () {
+    if (inputs[0].value !== currentPrice.min) {
+      if (inputs[0].value < price.min) {
+        inputs[0].value = price.min;
+      } else if (Number(inputs[0].value) >= currentPrice.max) {
+        inputs[0].value = currentPrice.max - 1;
+      }
+
+      currentPrice.min = inputs[0].value;
+
+      thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
+      track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
+    }
+  });
+  inputs[1].addEventListener('blur', function () {
+    if (inputs[1].value !== currentPrice.max) {
+      if (inputs[1].value > price.max) {
+        inputs[1].value = price.max;
+      } else if (inputs[1].value <= Number(currentPrice.min)) {
+        inputs[1].value = Number(currentPrice.min) + 1;
+      }
+
+      currentPrice.max = inputs[1].value;
+
+      thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
+      track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
     }
   });
 }
