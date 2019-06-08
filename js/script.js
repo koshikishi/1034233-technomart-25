@@ -179,6 +179,61 @@ for (var i = 0; i < serviceTabs.length; i++) {
   addTabClickHandler(serviceTabs[i], serviceSlides[i]);
 }
 
+// Оживление ползунков фильтра цены
+var slider = document.querySelector('.filters-form__slider');
+
+if (slider) {
+  var rangeWidth = 160;
+  var sliderIndent = 20;
+  var thumbHalfWidth = 10;
+  var price = {
+    min: 0,
+    max: 34286
+  };
+
+  // Делаем тумблеры перетаскиваемыми при нажатии на них кнопки мыши
+  var thumbs = slider.querySelectorAll('.filters-form__thumb');
+  var isDragging = [false, false];
+
+  thumbs[0].addEventListener('mousedown', function () {
+    isDragging[0] = true;
+  });
+  thumbs[1].addEventListener('mousedown', function () {
+    isDragging[1] = true;
+  });
+  slider.addEventListener('mouseup', function () {
+    isDragging = [false, false];
+  });
+
+  // Для перетаскиваемого тумблера вычисляем новое значение цены и положение на слайдере
+  var track = slider.querySelector('.filters-form__track');
+
+  var rangeRatio = rangeWidth / price.max;
+  var currentPrice = {
+    min: 0,
+    max: 30000
+  };
+
+  slider.addEventListener('mousemove', function (evt) {
+    if (isDragging[0]) {
+      currentPrice.min = Math.round(mousePosX(slider, evt) / rangeRatio);
+
+      if (currentPrice.min < currentPrice.max && currentPrice.min >= 0) {
+        thumbs[0].style.left = currentPrice.min * rangeRatio + sliderIndent + 'px';
+        track.style.left = currentPrice.min * rangeRatio + thumbHalfWidth + 'px';
+      }
+    }
+    if (isDragging[1]) {
+      currentPrice.max = Math.round(mousePosX(slider, evt) / rangeRatio);
+
+      if (currentPrice.max > currentPrice.min && currentPrice.max <= price.max) {
+        thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
+        track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
+      }
+    }
+  });
+}
+
 // Инициализация интерактивной карты
 function initMap() {
   var coordinates = {
@@ -237,4 +292,19 @@ function increaseCounter(btn) {
   btn.textContent = btn.textContent.slice(0, -(btnCounter.length - 1));
   btnCounter = Number(btnCounter) + 1;
   btn.textContent += btnCounter;
+}
+
+// Вычисляем координату X курсора относительно полоски слайдера,
+// учитывая отступы от краёв контейнера и ширину тумблеров
+function mousePosX(elmt, evt) {
+  var x = Math.round(evt.clientX - elmt.getBoundingClientRect().left) - (sliderIndent + thumbHalfWidth);
+
+  if (x < 0) {
+    x = 0;
+  }
+  if (x > rangeWidth) {
+    x = rangeWidth;
+  }
+
+  return x;
 }
