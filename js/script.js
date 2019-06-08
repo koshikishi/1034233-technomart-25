@@ -215,11 +215,8 @@ if (slider) {
     max: inputs[1].value
   };
 
-  thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
-  track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
-
-  thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
-  track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
+  moveLeftThumb(currentPrice.min);
+  moveRightThumb(currentPrice.max);
 
   // Вычисление для перетаскиваемого тумблера нового значения цены и положения на слайдере
   slider.addEventListener('mousemove', function (evt) {
@@ -227,8 +224,7 @@ if (slider) {
       currentPrice.min = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
 
       if (currentPrice.min < currentPrice.max && currentPrice.min >= price.min) {
-        thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
-        track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
+        moveLeftThumb(currentPrice.min);
         inputs[0].value = currentPrice.min;
       }
     }
@@ -236,8 +232,7 @@ if (slider) {
       currentPrice.max = Math.round(mousePosX(slider, evt) / rangeRatio) + price.min;
 
       if (currentPrice.max > currentPrice.min && currentPrice.max <= price.max) {
-        thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
-        track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
+        moveRightThumb(currentPrice.max);
         inputs[1].value = currentPrice.max;
       }
     }
@@ -253,9 +248,7 @@ if (slider) {
       }
 
       currentPrice.min = inputs[0].value;
-
-      thumbs[0].style.left = (currentPrice.min - price.min) * rangeRatio + sliderIndent + 'px';
-      track.style.left = (currentPrice.min - price.min) * rangeRatio + thumbHalfWidth + 'px';
+      moveLeftThumb(currentPrice.min);
     }
   });
   inputs[1].addEventListener('blur', function () {
@@ -267,9 +260,7 @@ if (slider) {
       }
 
       currentPrice.max = inputs[1].value;
-
-      thumbs[1].style.right = (price.max - currentPrice.max) * rangeRatio + sliderIndent + 'px';
-      track.style.right = (price.max - currentPrice.max) * rangeRatio + thumbHalfWidth + 'px';
+      moveRightThumb(currentPrice.max);
     }
   });
 }
@@ -332,6 +323,17 @@ function increaseCounter(btn) {
   btn.textContent = btn.textContent.slice(0, -(btnCounter.length - 1));
   btnCounter = Number(btnCounter) + 1;
   btn.textContent += btnCounter;
+}
+
+// Перемещение тумблеров в зависимости от цены
+function moveLeftThumb(minPrice) {
+  thumbs[0].style.left = (minPrice - price.min) * rangeRatio + sliderIndent + 'px';
+  track.style.left = (minPrice - price.min) * rangeRatio + thumbHalfWidth + 'px';
+}
+
+function moveRightThumb(maxPrice) {
+  thumbs[1].style.right = (price.max - maxPrice) * rangeRatio + sliderIndent + 'px';
+  track.style.right = (price.max - maxPrice) * rangeRatio + thumbHalfWidth + 'px';
 }
 
 // Вычисление координаты X курсора относительно полоски слайдера,
