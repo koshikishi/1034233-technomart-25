@@ -359,12 +359,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin-bottom: 7px;
 }
 
 .user-nav__button {
   position: relative;
   max-width: 102px;
+  margin-bottom: 7px;
   padding: 12px 24px;
   color: #000000;
   word-wrap: break-word;
@@ -1556,7 +1556,7 @@ img {
 /* Каталог товаров */
 .page__catalog {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .catalog__list {
@@ -1583,12 +1583,16 @@ img {
 /* Пагинация */
 .page__pagination {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
+}
+
+.pagination__link {
+  margin-bottom: 10px;
 }
 
 .pagination__link + .pagination__link {
@@ -1708,7 +1712,7 @@ img {
 /* Нижняя часть подвала */
 .footer__bottom {
   padding-top: 37px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   font: 16px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
@@ -1740,6 +1744,7 @@ img {
 .social__button {
   width: 41px;
   height: 41px;
+  margin-bottom: 5px;
   background-color: #212a3a;
   background-repeat: no-repeat;
   background-position: center;
