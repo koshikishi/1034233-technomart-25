@@ -195,7 +195,8 @@ img {
 }
 
 .header__search-button:hover,
-.header__search-button:focus {
+.header__search-button:focus,
+.header__search-field:hover + .header__search-button {
   background-color: #212a3a;
   outline: none;
   opacity: 1;
@@ -534,7 +535,7 @@ img {
   position: absolute;
   top: 7px;
   right: -22px;
-  z-index: 5;
+  z-index: 1;
   width: 28px;
   height: 0;
   padding-left: 2px;
@@ -610,7 +611,7 @@ img {
   position: absolute;
   bottom: 36px;
   left: 50%;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -784,7 +785,7 @@ img {
   position: absolute;
   top: 6px;
   right: -23px;
-  z-index: 5;
+  z-index: 1;
   width: 30px;
   height: 0;
   font: 15px/28px "Cuprum", "Arial", sans-serif;
@@ -881,7 +882,10 @@ img {
   opacity: 0;
 }
 
-.product:hover .product__buttons,
+.product:hover .product__buttons {
+  opacity: 1;
+}
+
 .product:focus-within .product__buttons {
   opacity: 1;
 }
@@ -1786,12 +1790,56 @@ img {
   margin: 0;
 }
 
+/* Анимация всплывающих окон */
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
 /* Всплывающие окна */
 .modal {
   position: relative;
-  z-index: 10;
+  z-index: 3;
+  display: none;
   background-color: #ffffff;
   border-top: 7px solid #ff5257;
+}
+
+.modal--shown {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal--error {
+  animation: shake 0.12s 5;
 }
 
 .modal__buttons {
@@ -1837,10 +1885,6 @@ img {
   transform: rotate(-45deg);
 }
 
-.hidden {
-  display: none;
-}
-
 /* Всплывающее окно обратной связи */
 .modal--contacts {
   position: fixed;
@@ -1848,8 +1892,9 @@ img {
   left: 50%;
   width: 620px;
   min-height: 423px;
+  margin-top: -215px;
+  margin-left: -320px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-  transform: translate(-50%, -50%);
 }
 
 .contacts-form__inner {
@@ -1921,14 +1966,20 @@ img {
   left: 50%;
   width: 940px;
   height: 446px;
+  margin-top: -223px;
+  margin-left: -470px;
   background: #ebf0f0 url("../img/map-large.png") 0 0 no-repeat;
   border: none;
   box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
-  transform: translate(-50%, -50%);
 }
 
 .modal--map iframe {
   border: none;
+}
+
+.map {
+  width: 940px;
+  height: 446px;
 }
 
 /* Всплывающее окно с добавлением товара в корзину */
@@ -1938,8 +1989,9 @@ img {
   left: 50%;
   width: 620px;
   min-height: 275px;
+  margin-top: -141px;
+  margin-left: -320px;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
-  transform: translate(-50%, -50%);
 }
 
 .modal__inner {
@@ -1977,6 +2029,22 @@ img {
 
 .button--continue:active {
   background-color: #ccc8c8;
+}
+
+/* Оверлей */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay--shown {
+  display: block;
 }
 
 /* Доступное скрытие элемента */

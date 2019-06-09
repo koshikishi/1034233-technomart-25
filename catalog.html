@@ -112,9 +112,9 @@
                   </button>
                 </div>
                 <div class="filters-form__price">
-                  <input type="number" name="min-price" value="0" min="0" aria-label="Минимальная цена">
+                  <input type="number" name="min-price" value="0" min="0" max="34286" aria-label="Минимальная цена">
                   —
-                  <input type="number" name="max-price" value="30000" min="0" aria-label="Максимальная цена">
+                  <input type="number" name="max-price" value="30000" min="0" max="34286" aria-label="Максимальная цена">
                 </div>
               </fieldset>
               <fieldset class="filters-form__part">
@@ -405,7 +405,7 @@
       </div>
     </footer>
 
-    <section class="modal modal--cart hidden">
+    <section class="modal modal--cart">
       <div class="modal__inner">
         <h2 class="visually-hidden">Добавление товара в корзину</h2>
         <b>Товар добавлен в корзину!</b>
@@ -418,5 +418,9 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
