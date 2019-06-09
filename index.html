@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-        <nav class="site-nav header__nav">
+        <nav class="site-nav">
           <a href="index.html">Главная</a>
           <a href="about.html">Компания</a>
           <a href="catalog.html">Каталог</a>
@@ -62,35 +62,35 @@
       </div>
     </header>
 
-    <main class="main">
+    <main>
       <section class="promo page__promo container">
         <h2 class="visually-hidden">Избранное</h2>
         <div class="promo__row">
           <section class="promo-card promo-card--material promo-card--new">
             <h3>Материалы</h3>
-            <a class="button button--promo promo-card__button" href="#">На любой вкус</a>
+            <a class="button button--promo" href="#">На любой вкус</a>
           </section>
           <section class="promo-card promo-card--tools">
             <h3>Инструмент</h3>
-            <a class="button button--promo promo-card__button" href="#">На все случаи</a>
+            <a class="button button--promo" href="#">На все случаи</a>
           </section>
           <section class="promo-card promo-card--tech">
             <h3>Техника</h3>
-            <a class="button button--promo promo-card__button" href="#">Для стройки</a>
+            <a class="button button--promo" href="#">Для стройки</a>
           </section>
         </div>
         <div class="promo__row promo__row--slider">
           <section class="promo-card promo-card--sale">
             <h3>Скидки 50%</h3>
-            <a class="button button--promo promo-card__button" href="offers.html">На 350 товаров</a>
+            <a class="button button--promo" href="offers.html">На 350 товаров</a>
           </section>
           <section class="promo-card promo-card--delivery">
             <h3>Доставка</h3>
-            <a class="button button--promo promo-card__button" href="delivery.html">Бесплатно</a>
+            <a class="button button--promo" href="delivery.html">Бесплатно</a>
           </section>
           <section class="slider">
-            <input class="slider__radio visually-hidden" id="slider-1" type="radio" name="slider">
-            <input class="slider__radio visually-hidden" id="slider-2" type="radio" name="slider" checked>
+            <input class="visually-hidden" id="slider-1" type="radio" name="slider">
+            <input class="visually-hidden" id="slider-2" type="radio" name="slider" checked>
             <div class="slider__control">
               <label for="slider-1">
                 <span class="visually-hidden">Первый слайд «Перфораторы»</span>
@@ -228,7 +228,7 @@
         <div class="container">
           <h2 class="title services__title">Сервисы</h2>
           <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <dl class="tabs services__tabs">
+          <dl class="tabs">
             <dt class="tabs__control">
               <button class="tabs__selector tabs__selector--current" type="button">Доставка</button>
             </dt>
@@ -268,7 +268,7 @@
 
       <div class="container columns">
         <section class="about">
-          <h2 class="title">Компания «Техномарт»</h2>
+          <h2 class="title about__title">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>
             Мы можем доставить ваш товар в самые отдаленные точки России!<br>
@@ -283,7 +283,7 @@
         </section>
 
         <section class="contacts">
-          <h2 class="title">Контакты</h2>
+          <h2 class="title contacts__title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="contacts__map-image" href="map.html">
             <img src="img/map-small.png" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" width="300" height="158">
@@ -377,7 +377,7 @@
 
     <section class="modal modal--map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="map" aria-label="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"></div>
+      <div class="map"></div>
       <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
