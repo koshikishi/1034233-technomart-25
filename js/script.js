@@ -268,8 +268,8 @@ if (slider) {
 // Инициализация интерактивной карты
 function initMap() {
   var coordinates = {
-    lat: 59.9387165,
-    lng: 30.3225002
+    lat: 59.938723,
+    lng: 30.323039
   };
 
   var map = new google.maps.Map(document.querySelector('.map'), {
