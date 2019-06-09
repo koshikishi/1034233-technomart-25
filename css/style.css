@@ -726,6 +726,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 /* Заголовок раздела на главной странице */
@@ -1564,6 +1565,7 @@ img {
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 
 .catalog__product {
