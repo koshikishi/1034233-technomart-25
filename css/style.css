@@ -359,12 +359,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin-bottom: 7px;
 }
 
 .user-nav__button {
   position: relative;
   max-width: 102px;
+  margin-bottom: 7px;
   padding: 12px 24px;
   color: #000000;
   word-wrap: break-word;
@@ -726,6 +726,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 /* Заголовок раздела на главной странице */
@@ -1112,10 +1113,6 @@ img {
   margin-bottom: 26px;
 }
 
-.tabs__button {
-  min-width: 115px;
-}
-
 .tabs__title {
   margin-bottom: 25px;
 }
@@ -1124,6 +1121,10 @@ img {
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
+}
+
+.tabs__button {
+  min-width: 115px;
 }
 
 /* Блок колонок */
@@ -1139,7 +1140,7 @@ img {
   width: 540px;
 }
 
-.about h2 {
+.about__title {
   margin-bottom: 26px;
 }
 
@@ -1188,7 +1189,7 @@ img {
   width: 300px;
 }
 
-.contacts h2 {
+.contacts__title {
   margin-bottom: 26px;
 }
 
@@ -1318,7 +1319,7 @@ img {
 .filters-form__track {
   position: absolute;
   right: 30px;
-  left: 0;
+  left: 10px;
   height: 100%;
   background-color: #00ca74;
 }
@@ -1555,7 +1556,7 @@ img {
 /* Каталог товаров */
 .page__catalog {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .catalog__list {
@@ -1564,6 +1565,7 @@ img {
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 
 .catalog__product {
@@ -1581,12 +1583,16 @@ img {
 /* Пагинация */
 .page__pagination {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
+}
+
+.pagination__link {
+  margin-bottom: 10px;
 }
 
 .pagination__link + .pagination__link {
@@ -1706,7 +1712,7 @@ img {
 /* Нижняя часть подвала */
 .footer__bottom {
   padding-top: 37px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   font: 16px/18px "Cuprum", "Arial", sans-serif;
   color: #ffffff;
   background-color: #293449;
@@ -1738,6 +1744,7 @@ img {
 .social__button {
   width: 41px;
   height: 41px;
+  margin-bottom: 5px;
   background-color: #212a3a;
   background-repeat: no-repeat;
   background-position: center;
@@ -1973,13 +1980,9 @@ img {
   box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
 }
 
-.modal--map iframe {
-  border: none;
-}
-
 .map {
-  width: 940px;
-  height: 446px;
+  width: 100%;
+  height: 100%;
 }
 
 /* Всплывающее окно с добавлением товара в корзину */
