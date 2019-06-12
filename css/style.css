@@ -2050,7 +2050,7 @@ img {
   display: block;
 }
 
-/* Доступное скрытие элемента */
+/* Доступное сокрытие элемента */
 .visually-hidden {
   position: absolute;
   width: 1px;
